@@ -1,0 +1,68 @@
+{
+  "characternet": {
+    "version": "1.0",
+    "last_updated": "2026-10-24",
+    "characters": [
+      {
+        "id": "PRS-001",
+        "hanzi": "休",
+        "pinyin": "xiū",
+        "tone": 1,
+        "meaning": "to rest",
+        "visual_pieces": [
+          {
+            "piece": "亻",
+            "description": "a person"
+          },
+          {
+            "piece": "木",
+            "description": "a tree"
+          }
+        ],
+        "prs_story": "A person (亻) leans against a tree (木) to rest. He sighs, 'See you (xiū) later.'",
+        "tags": ["Nursery", "Nature", "Actions"],
+        "contributed_by": "Abraham Praise"
+      },
+      {
+        "id": "PRS-002",
+        "hanzi": "好",
+        "pinyin": "hǎo",
+        "tone": 3,
+        "meaning": "good",
+        "visual_pieces": [
+          {
+            "piece": "女",
+            "description": "a woman"
+          },
+          {
+            "piece": "子",
+            "description": "a child"
+          }
+        ],
+        "prs_story": "A woman (女) with her child (子). She looks at him and says, 'How (hǎo) good is that? Really good.'",
+        "tags": ["Nursery", "Family", "Feelings"],
+        "contributed_by": "Abraham Praise"
+      },
+      {
+        "id": "PRS-003",
+        "hanzi": "丽",
+        "pinyin": "lì",
+        "tone": 4,
+        "meaning": "beautiful",
+        "visual_pieces": [
+          {
+            "piece": "一",
+            "description": "one long eyebrow"
+          },
+          {
+            "piece": "冂",
+            "description": "the two eyelids below"
+          }
+        ],
+        "prs_story": "Having one long eyebrow (一) sitting across the two eyelids (冂) below is very beautiful (lì).",
+        "tags": ["Nursery", "Descriptions", "Body"],
+        "contributed_by": "Abraham Praise"
+      }
+    ]
+  }
+}
