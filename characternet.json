@@ -1,67 +1,31 @@
 {
   "characternet": {
     "version": "1.0",
-    "last_updated": "2026-10-24",
+    "last_updated": "2026-10-29",
     "characters": [
       {
-        "id": "PRS-001",
-        "hanzi": "休",
+        "character": "休",
         "pinyin": "xiū",
         "tone": 1,
         "meaning": "to rest",
-        "visual_pieces": [
-          {
-            "piece": "亻",
-            "description": "a person"
-          },
-          {
-            "piece": "木",
-            "description": "a tree"
-          }
-        ],
-        "prs_story": "A person (亻) leans against a tree (木) to rest. He sighs, 'See you (xiū) later.'",
-        "tags": ["Nursery", "Nature", "Actions"],
-        "contributed_by": "Abraham Praise"
+        "visual_pieces": ["亻", "木"],
+        "binding_constraint": "Bind the visual pieces (person, tree) with the sound 'xiū' and the 1st flat tone into a scene that means 'to rest'."
       },
       {
-        "id": "PRS-002",
-        "hanzi": "好",
+        "character": "好",
         "pinyin": "hǎo",
         "tone": 3,
         "meaning": "good",
-        "visual_pieces": [
-          {
-            "piece": "女",
-            "description": "a woman"
-          },
-          {
-            "piece": "子",
-            "description": "a child"
-          }
-        ],
-        "prs_story": "A woman (女) with her child (子). She looks at him and says, 'How (hǎo) good is that? Really good.'",
-        "tags": ["Nursery", "Family", "Feelings"],
-        "contributed_by": "Abraham Praise"
+        "visual_pieces": ["女", "子"],
+        "binding_constraint": "Bind the visual pieces (woman, child) with the sound 'hǎo' and the 3rd dipping tone into a scene that means 'good'."
       },
       {
-        "id": "PRS-003",
-        "hanzi": "丽",
+        "character": "丽",
         "pinyin": "lì",
         "tone": 4,
         "meaning": "beautiful",
-        "visual_pieces": [
-          {
-            "piece": "一",
-            "description": "one long eyebrow"
-          },
-          {
-            "piece": "冂",
-            "description": "the two eyelids below"
-          }
-        ],
-        "prs_story": "Having one long eyebrow (一) sitting across the two eyelids (冂) below is very beautiful (lì).",
-        "tags": ["Nursery", "Descriptions", "Body"],
-        "contributed_by": "Abraham Praise"
+        "visual_pieces": ["一", "冂"],
+        "binding_constraint": "Bind the visual pieces (one long eyebrow, two eyelids) with the sound 'lì' and the 4th falling tone into a scene that means 'beautiful'."
       }
     ]
   }
