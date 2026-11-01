@@ -11,8 +11,7 @@
 "meaning": "one",
 "visual_pieces": ["一"],
 "binding_constraint": "Bind the visual pieces (one line) with the sound 'yī' and the 1st high and flat tone into a scene that means 'one'."
-}
-,
+},
 
 {
 "character": "二",
@@ -21,8 +20,7 @@
 "meaning": "two",
 "visual_pieces": ["二"],
 "binding_constraint": "Bind the visual pieces (two lined) with the sound 'èr' and the 4th falling tone into a scene that means 'two'."
-}
-,
+},
 
 {
 "character": "三",
@@ -31,8 +29,7 @@
 "meaning": "three",
 "visual_pieces": ["三"],
 "binding_constraint": "Bind the visual pieces (three lines) with the sound 'sān' and the 1st high and flat tone into a scene that means 'three'."
-}
-,
+},
 
 {
 "character": "四",
@@ -41,8 +38,7 @@
 "meaning": "four",
 "visual_pieces": ["口", "儿"],
 "binding_constraint": "Bind the visual pieces (four lines opening, a pair of legs) with the sound 'sì' and the 4th falling tone into a scene that means 'four'."
-}
-,
+},
 
 {
 "character": "五",
