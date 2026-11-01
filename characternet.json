@@ -3,30 +3,52 @@
     "version": "1.0",
     "last_updated": "2026-10-29",
     "characters": [
-      {
-        "character": "休",
-        "pinyin": "xiū",
-        "tone": 1,
-        "meaning": "to rest",
-        "visual_pieces": ["亻", "木"],
-        "binding_constraint": "Bind the visual pieces (person, tree) with the sound 'xiū' and the 1st flat tone into a scene that means 'to rest'."
-      },
-      {
-        "character": "好",
-        "pinyin": "hǎo",
-        "tone": 3,
-        "meaning": "good",
-        "visual_pieces": ["女", "子"],
-        "binding_constraint": "Bind the visual pieces (woman, child) with the sound 'hǎo' and the 3rd dipping tone into a scene that means 'good'."
-      },
-      {
-        "character": "丽",
-        "pinyin": "lì",
-        "tone": 4,
-        "meaning": "beautiful",
-        "visual_pieces": ["一", "冂"],
-        "binding_constraint": "Bind the visual pieces (one long eyebrow, two eyelids) with the sound 'lì' and the 4th falling tone into a scene that means 'beautiful'."
-      }
-    ]
-  }
+     
+{
+"character": "一",
+"pinyin": "yī",
+"tone": 1,
+"meaning": "one",
+"visual_pieces": ["一"],
+"binding_constraint": "Bind the visual pieces (one line) with the sound 'yī' and the 1st high and flat tone into a scene that means 'one'."
+}
+,
+
+{
+"character": "二",
+"pinyin": "èr",
+"tone": 4,
+"meaning": "two",
+"visual_pieces": ["二"],
+"binding_constraint": "Bind the visual pieces (two lined) with the sound 'èr' and the 4th falling tone into a scene that means 'two'."
+}
+,
+
+{
+"character": "三",
+"pinyin": "sān",
+"tone": 1,
+"meaning": "three",
+"visual_pieces": ["三"],
+"binding_constraint": "Bind the visual pieces (three lines) with the sound 'sān' and the 1st high and flat tone into a scene that means 'three'."
+}
+,
+
+{
+"character": "四",
+"pinyin": "sì",
+"tone": 4,
+"meaning": "four",
+"visual_pieces": ["口", "儿"],
+"binding_constraint": "Bind the visual pieces (four lines opening, a pair of legs) with the sound 'sì' and the 4th falling tone into a scene that means 'four'."
+}
+,
+
+{
+"character": "五",
+"pinyin": "wǔ",
+"tone": 3,
+"meaning": "five",
+"visual_pieces": ["一", "／", "｜"],
+"binding_constraint": "Bind the visual pieces (five lines) with the sound 'wǔ' and the 3rd falling then rising tone into a scene that means 'five'."
 }
