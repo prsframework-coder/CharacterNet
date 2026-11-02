@@ -82,7 +82,15 @@
         "meaning": "ten",
         "visual_pieces": ["十"],
         "binding_constraint": "Bind the visual pieces (a cross of two lines) with the sound 'shí' and the 2nd rising tone into a scene that means 'ten'."
-      }
+      },
+{
+"character": "你",
+"pinyin": "nǐ",
+"tone": 3,
+"meaning": "you",
+"visual_pieces": [[" 小 "，"⺈"，"亻"],
+"binding_constraint": "Bind the visual pieces (small, knifecut, person) with the sound 'nǐ' and the 3rd falling then rising tone into a scene that means 'you'."
+}
     ]
   }
 }
