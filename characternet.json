@@ -90,6 +90,14 @@
         "meaning": "you",
         "visual_pieces": ["亻", "尔"],
         "binding_constraint": "Bind the visual pieces (small cut, person) with the sound 'nǐ' and the 3rd falling then rising tone into a scene that means 'you'."
+      }，
+{
+        "character": "好",
+        "pinyin": "hǎo",
+        "tone": 3,
+        "meaning": "good",
+        "visual_pieces": ["女", "子"],
+        "binding_constraint": "Bind the visual pieces (woman, child) with the sound 'hǎo' and the 3rd falling then rising tone into a scene that means 'good'."
       }
     ]
   }
