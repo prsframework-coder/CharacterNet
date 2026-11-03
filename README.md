@@ -1,70 +1,48 @@
 # CharacterNet
 
-**An open-source visual decomposition dataset for Chinese character learning.**
+**An open-source visual decomposition dataset for Chinese character learning, powered by the PRS™ Framework.**
 
 CharacterNet provides the raw materials for understanding Chinese characters: the visual components, phonetic mapping, tonal structure, and semantic meaning. It does **not** include finished mnemonic stories or pedagogical sequences.
 
----
+## Repository Structure
+
+- `/data/characternet.json` — The main dataset (23 starter characters).
+- `/schema/characternet.schema.json` — The JSON Schema to validate new entries.
+- `/src/prs_characternet.py` — A Python loader for querying, validating, and testing the dataset.
+- `BOUNDARY.md` — The legal and conceptual separation between the free dataset and the commercial application.
+- `LICENSE` — CC BY 4.0.
+
+## How to Use (Python)
+
+1. Clone the repository:
+   `git clone https://github.com/prsframework-coder/CharacterNet.git`
+2. Navigate to the folder:
+   `cd CharacterNet`
+3. Run the Python loader:
+   `python src/prs_characternet.py data/characternet.json --report`
+4. Look up a character:
+   `python src/prs_characternet.py data/characternet.json --lookup 我`
 
 ## What CharacterNet Provides
 
-- **Character metadata**: pinyin, tone, primary meaning
-- **Visual decomposition (VD)**: the constituent pieces (radicals, sub-components) of each character
-- **Binding constraints**: instruction templates that define the parameters for generating a mnemonic story (visual pieces + sound + tone + meaning)
-
-CharacterNet is the **input dataset**. It is not the engine.
-
----
+- **Character metadata**: pinyin, tone, primary meaning.
+- **Visual decomposition (VD)**: the constituent pieces of each character.
+- **Binding constraints**: instruction templates for generating mnemonic stories.
+- **Integrity testing**: a schema to validate that every entry follows the PRS dynamic architecture.
 
 ## What CharacterNet Does NOT Provide
 
-- **Finished mnemonic stories** (Semantic Multiplexing layer)
-- **Story generation engine**
-- **Curriculum sequencing**
-- **User experience or pedagogical framework**
+- Finished mnemonic stories (Semantic Multiplexing layer).
+- The story generation engine.
+- Curriculum sequencing.
 
 Those elements are part of **[PRS Chinese](https://www.prschinese.sg)**, a commercial platform built on top of this dataset.
 
----
+## License
 
-## Licence
+CharacterNet is released under **Creative Commons Attribution 4.0 International (CC BY 4.0)**. You are free to share and adapt the material, provided you give appropriate credit.
 
-CharacterNet is released under **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**.
+## Contact
 
-You are free to:
-- **Share**: copy and redistribute the material in any medium or format
-- **Adapt**: remix, transform, and build upon the material for any purpose, including commercially
-
-**Attribution requirement**: credit CharacterNet and link to this repository.
-
----
-
-## Boundary Statement
-
-### Free (Open Source)
-CharacterNet is a **dataset**. It contains:
-- Visual decomposition (VD): the constituent pieces of each character
-- Phonetic and tonal metadata
-- Binding constraints: the raw parameters for story generation
-
-### Paid (Commercial)
-**PRS Chinese** is a **platform**. It contains:
-- Semantic Multiplexing (SM): the absurd, finished mnemonic stories
-- The story generation engine (proprietary)
-- Curriculum design and adaptive sequencing
-- Full user experience (web app, mobile, coaching)
-
-**CharacterNet is the scaffolding. PRS Chinese is the house.**
-
-If you are building research tools, training AI models, or creating non-commercial educational projects, CharacterNet is yours to use freely.
-
-If you are building a commercial learning platform that generates finished stories, you are welcome to use CharacterNet as the input dataset, but the story generation layer is outside the scope of this repository.
-
----
-
-## Usage
-
-### Installation
-```bash
-git clone https://github.com/your-org/CharacterNet.git
-cd CharacterNet
+For dataset questions: open an issue in this repository.
+For commercial enquiries: hello@prschinese.sg
