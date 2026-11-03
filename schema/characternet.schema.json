@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CharacterNet",
+  "type": "object",
+  "required": ["characternet"],
+  "properties": {
+    "characternet": {
+      "type": "object",
+      "required": ["version", "characters"],
+      "properties": {
+        "version": { "type": "string" },
+        "last_updated": { "type": "string", "format": "date" },
+        "framework": { "type": "string" },
+        "architecture": { "type": "string" },
+        "characters": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/character" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "character": {
+      "type": "object",
+      "required": ["id", "character", "pinyin", "tone", "meaning", "visual_pieces", "binding_constraint"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^PRS-[0-9]{4}$" },
+        "character": { "type": "string", "minLength": 1, "maxLength": 4 },
+        "pinyin": { "type": "string", "minLength": 1 },
+        "tone": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "tone_contour": {
+          "type": "string",
+          "enum": ["flat (ˉ)", "rising (´)", "dip-rise (ˇ)", "falling (ˋ)"]
+        },
+        "meaning": { "type": "string", "minLength": 1 },
+        "visual_pieces": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "component_meanings": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "component_pinyin": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "binding_constraint": { "type": "string", "minLength": 10 },
+        "leading_question": { "type": "string" },
+        "connections": {
+          "type": "object",
+          "properties": {
+            "component_to_action": { "type": "boolean" },
+            "identity_link": { "type": "boolean" },
+            "causal_order": { "type": "boolean" },
+            "sound_in_action": { "type": "boolean" },
+            "tone_in_word": { "type": "boolean" },
+            "meaning_as_payoff": { "type": "boolean" }
+          }
+        },
+        "integrity_test": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "enum": ["collapses", "survives"]
+          }
+        },
+        "scene_example": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "family": { "type": "string" }
+      }
+    }
+  }
+}
