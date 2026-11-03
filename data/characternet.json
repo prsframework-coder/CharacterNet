@@ -1,0 +1,723 @@
+{
+  "characternet": {
+    "version": "1.1",
+    "last_updated": "2026-11-03",
+    "framework": "PRS — Picture, Retrieve, Story",
+    "architecture": "Dynamic Architecture: connecting load-bearing relationships that fuse the four beams — shape, form, pinyin, tone — and meaning into a single causal scene. Different scene each time, same kind of connection. Remove any beam and recall collapses.",
+    "characters": [
+      {
+        "id": "PRS-0001",
+        "character": "一",
+        "pinyin": "yī",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "one",
+        "visual_pieces": ["一"],
+        "component_meanings": { "一": "one flat line" },
+        "component_pinyin": { "一": "yī" },
+        "binding_constraint": "Bind the visual pieces (one flat line) with the sound 'yī' and the 1st high and flat tone into a scene that means 'one'.",
+        "leading_question": "How many lines of sheep?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "Is that one line of sheep? Yee (yī) — yes!",
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "PRS-0002",
+        "character": "二",
+        "pinyin": "èr",
+        "tone": 4,
+        "tone_contour": "falling (ˋ)",
+        "meaning": "two",
+        "visual_pieces": ["二"],
+        "component_meanings": { "二": "two stacked lines" },
+        "component_pinyin": { "二": "èr" },
+        "binding_constraint": "Bind the visual pieces (two stacked lines) with the sound 'èr' and the 4th falling tone into a scene that means 'two'.",
+        "leading_question": "Is that two lines of sheep?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "Eeeer (èr) — yes! Two lines of sheep!",
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "PRS-0003",
+        "character": "三",
+        "pinyin": "sān",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "three",
+        "visual_pieces": ["三"],
+        "component_meanings": { "三": "three stacked lines" },
+        "component_pinyin": { "三": "sān" },
+        "binding_constraint": "Bind the visual pieces (three stacked lines) with the sound 'sān' and the 1st high and flat tone into a scene that means 'three'.",
+        "leading_question": "Is that three lines of sheep?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "Yes — sandwiched (sān) together! Three lines of sheep!",
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "PRS-0004",
+        "character": "四",
+        "pinyin": "sì",
+        "tone": 4,
+        "tone_contour": "falling (ˋ)",
+        "meaning": "four",
+        "visual_pieces": ["囗", "儿"],
+        "component_meanings": { "囗": "enclosure / pen", "儿": "legs inside" },
+        "component_pinyin": { "囗": "wéi", "儿": "ér" },
+        "binding_constraint": "Bind the visual pieces (an enclosure with legs inside) with the sound 'sì' and the 4th falling tone into a scene that means 'four' — sheep jumping down into the pen.",
+        "leading_question": "Is that four lines in that opening?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "Let me jump in to see (sì)! Four lines in the pen!",
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "PRS-0005",
+        "character": "五",
+        "pinyin": "wǔ",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "five",
+        "visual_pieces": ["一", "／", "｜"],
+        "component_meanings": { "一": "top bar", "／": "angled stroke", "｜": "vertical stroke" },
+        "component_pinyin": { "一": "yī", "／": "slash", "｜": "gǔn" },
+        "binding_constraint": "Bind the visual pieces (a gate/fence structure) with the sound 'wǔ' and the 3rd falling then rising tone into a scene that means 'five'.",
+        "leading_question": "Is that five lines?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "Wu-ait (wǔ) — yes, five!",
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "PRS-0006",
+        "character": "六",
+        "pinyin": "liù",
+        "tone": 4,
+        "tone_contour": "falling (ˋ)",
+        "meaning": "six",
+        "visual_pieces": ["亠", "八"],
+        "component_meanings": { "亠": "lid", "八": "two splayed legs" },
+        "component_pinyin": { "亠": "tóu", "八": "bā" },
+        "binding_constraint": "Bind the visual pieces (a lid over two splayed legs) with the sound 'liù' and the 4th falling tone into a scene that means 'six' — the lid lowers to hide two ears, leaving six visible parts.",
+        "leading_question": "What happens when you lower a lid on the bah-bah sheep?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "This sheep is out of line — lower (liù) the lid on its head, hiding its 2 ears — now only 6 parts are visible!",
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "PRS-0007",
+        "character": "七",
+        "pinyin": "qī",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "seven",
+        "visual_pieces": ["L", "一"],
+        "component_meanings": { "L": "upside-down 7 shape", "一": "cue-stick crossbar" },
+        "component_pinyin": { "L": "ell", "一": "yī" },
+        "binding_constraint": "Bind the visual pieces (an upside-down 7 crossed by a cue-stick line) with the sound 'qī' and the 1st high and flat tone into a scene that means 'seven'.",
+        "leading_question": "What is the escaped sheep caught with?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "The sheep is getting away — grab the cue stick (qī)! It looks like an upside-down seven with a cue-stick crossbar through the middle.",
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "PRS-0008",
+        "character": "八",
+        "pinyin": "bā",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "eight",
+        "visual_pieces": ["八"],
+        "component_meanings": { "八": "two splayed legs" },
+        "component_pinyin": { "八": "bā" },
+        "binding_constraint": "Bind the visual pieces (two splayed legs of a sheep standing front-on) with the sound 'bā' and the 1st high and flat tone into a scene that means 'eight' — 8 parts: 2 ears, 2 eyes, 2 sets of 2 legs.",
+        "leading_question": "How many parts has the bah-bah black sheep?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "A bah-bah (bā) black sheep stands front-on (八) for inspection — 8 parts: 2 ears, 2 eyes, 2 sets of 2 legs!",
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "PRS-0009",
+        "character": "九",
+        "pinyin": "jiǔ",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "nine",
+        "visual_pieces": ["丿", "一", "乚"],
+        "component_meanings": { "丿": "leg stroke", "一": "one line", "乚": "curled tail" },
+        "component_pinyin": { "丿": "piě", "一": "yī", "乚": "yǐn" },
+        "binding_constraint": "Bind the visual pieces (leg stroke, one line, curled tail) with the sound 'jiǔ' and the 3rd falling then rising tone into a scene that means 'nine' — the sheep's forgotten tail is the 9th part.",
+        "leading_question": "What did the sheep forget to have counted?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "One sheep turns sideways and jiokes (jiǔ): 'You forgot to count my tail — the 9th part!' The shepherds laugh.",
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "PRS-0010",
+        "character": "十",
+        "pinyin": "shí",
+        "tone": 2,
+        "tone_contour": "rising (´)",
+        "meaning": "ten",
+        "visual_pieces": ["十"],
+        "component_meanings": { "十": "cross / fallen tent crossbar" },
+        "component_pinyin": { "十": "shí" },
+        "binding_constraint": "Bind the visual pieces (a cross of two lines, like a fallen tent crossbar) with the sound 'shí' and the 2nd rising tone into a scene that means 'ten'.",
+        "leading_question": "What has fallen on the ground?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "All sheep accounted for — let's head back. Is that a crossbar on the floor? Shiite (shí) — the sheep tent (ten) has fallen!",
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "PRS-0011",
+        "character": "你",
+        "pinyin": "nǐ",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "you",
+        "visual_pieces": ["亻", "尔"],
+        "component_meanings": { "亻": "person", "尔": "knife-cut small" },
+        "component_pinyin": { "亻": "rén", "尔": "ěr" },
+        "binding_constraint": "Bind the visual pieces (a person, and a knife-cut small shape) with the sound 'nǐ' and the 3rd falling then rising tone into a scene that means 'you' — a knee-high small person, that's you.",
+        "leading_question": "How much is the person cut short?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "A person (亻) knife-cut (⺈) small (小) — a knee-high (nǐ) short person — that's you!",
+        "tags": ["pronoun", "hs1"],
+        "family": "pronouns"
+      },
+      {
+        "id": "PRS-0012",
+        "character": "好",
+        "pinyin": "hǎo",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "good",
+        "visual_pieces": ["女", "子"],
+        "component_meanings": { "女": "woman", "子": "child" },
+        "component_pinyin": { "女": "nǚ", "子": "zǐ" },
+        "binding_constraint": "Bind the visual pieces (a woman, a child) with the sound 'hǎo' and the 3rd falling then rising tone into a scene that means 'good' — a woman with her child, how good is that.",
+        "leading_question": "What is a woman with a child?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "A woman (女) with her child (子) — how (hǎo) good is that!",
+        "tags": ["adjective", "hs1"],
+        "family": "woman-compounds"
+      },
+      {
+        "id": "PRS-0013",
+        "character": "我",
+        "pinyin": "wǒ",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "I, me",
+        "visual_pieces": ["手", "戈"],
+        "component_meanings": { "手": "hand", "戈": "spear / halberd" },
+        "component_pinyin": { "手": "shǒu", "戈": "gē" },
+        "binding_constraint": "Bind the visual pieces (a hand, a halberd) with the sound 'wǒ' and the 3rd falling then rising tone into a scene that means 'I, me'.",
+        "leading_question": "What is the hand doing with the spear?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "The hand (手) raised in court shouting (shǒu) 'Order!' is the same hand holding a spear (戈) — getting (gē) ready to shoot straight at the people — 'Wow (wǒ) — that's me, I will do that!'",
+        "tags": ["pronoun", "hs1"],
+        "family": "pronouns"
+      },
+      {
+        "id": "PRS-0014",
+        "character": "明",
+        "pinyin": "míng",
+        "tone": 2,
+        "tone_contour": "rising (´)",
+        "meaning": "bright",
+        "visual_pieces": ["日", "月"],
+        "component_meanings": { "日": "sun", "月": "moon" },
+        "component_pinyin": { "日": "rì", "月": "yuè" },
+        "binding_constraint": "Bind the visual pieces (sun, moon) with the sound 'míng' and the 2nd rising tone into a scene that means 'bright' — light plus light gives bright light.",
+        "leading_question": "What is the outcome when sun and moon are together?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "Sun (日) and moon (月) together — both give light — light plus light gives bright (míng) light!",
+        "tags": ["adjective", "hs1"],
+        "family": "nature-compounds"
+      },
+      {
+        "id": "PRS-0015",
+        "character": "妈",
+        "pinyin": "mā",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "mother",
+        "visual_pieces": ["女", "马"],
+        "component_meanings": { "女": "woman", "马": "horse (sound component)" },
+        "component_pinyin": { "女": "nǚ", "马": "mǎ" },
+        "binding_constraint": "Bind the visual pieces (woman, horse) with the sound 'mā' and the 1st high and flat tone into a scene that means 'mother' — a woman called 'Ma' (mama) is a mother.",
+        "leading_question": "What makes a woman with a horse a mother?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "A woman (女) with a horse (马) — what makes her a mother? She is called 'Ma' — mama (mā) — a mother!",
+        "tags": ["family", "hs1"],
+        "family": "woman-compounds"
+      },
+      {
+        "id": "PRS-0016",
+        "character": "他",
+        "pinyin": "tā",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "he, him",
+        "visual_pieces": ["亻", "也"],
+        "component_meanings": { "亻": "person", "也": "also" },
+        "component_pinyin": { "亻": "rén", "也": "yě" },
+        "binding_constraint": "Bind the visual pieces (a person, also) with the sound 'tā' and the 1st high and flat tone into a scene that means 'he, him' — a male person is also a 'he'.",
+        "leading_question": "What is a person also?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "A person (亻) — what is a person also (也)? A male person is also a 'he' (tā)!",
+        "tags": ["pronoun", "hs1"],
+        "family": "ye-family"
+      },
+      {
+        "id": "PRS-0017",
+        "character": "她",
+        "pinyin": "tā",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "she, her",
+        "visual_pieces": ["女", "也"],
+        "component_meanings": { "女": "woman", "也": "also" },
+        "component_pinyin": { "女": "nǚ", "也": "yě" },
+        "binding_constraint": "Bind the visual pieces (a woman, also) with the sound 'tā' and the 1st high and flat tone into a scene that means 'she, her' — a female person is also a 'she'.",
+        "leading_question": "What is a woman also?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "A woman (女) — what is a woman also (也)? A female person is also a 'she' (tā)!",
+        "tags": ["pronoun", "hs1"],
+        "family": "ye-family"
+      },
+      {
+        "id": "PRS-0018",
+        "character": "它",
+        "pinyin": "tā",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "it",
+        "visual_pieces": ["宀", "匕"],
+        "component_meanings": { "宀": "roof / cover", "匕": "curled shape" },
+        "component_pinyin": { "宀": "mián", "匕": "bǐ" },
+        "binding_constraint": "Bind the visual pieces (a roof, a curled shape) with the sound 'tā' and the 1st high and flat tone into a scene that means 'it' — a non-human thing is also an 'it'.",
+        "leading_question": "What is a thing also?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "A covered thing (宀 + 匕) — what is a thing also? A non-human thing is also an 'it' (tā)!",
+        "tags": ["pronoun", "hs1"],
+        "family": "ye-family"
+      },
+      {
+        "id": "PRS-0019",
+        "character": "尔",
+        "pinyin": "ěr",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "you (archaic)",
+        "visual_pieces": ["⺈", "小"],
+        "component_meanings": { "⺈": "knife-cut", "小": "small" },
+        "component_pinyin": { "⺈": "dāo", "小": "xiǎo" },
+        "binding_constraint": "Bind the visual pieces (knife-cut, small, lying-down person shape) with the sound 'ěr' and the 3rd falling then rising tone into a scene that means 'you (archaic)' — you, sir, are the knife-cut small person.",
+        "leading_question": "What has been knife-cut small?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "Knife-cut (⺈) small (小) — what is cut short? Look again: a person lying down on their side. You, sir (ěr) — you are the knife-cut small person!",
+        "tags": ["pronoun", "archaic", "hs2"],
+        "family": "pronouns"
+      },
+      {
+        "id": "PRS-0020",
+        "character": "林",
+        "pinyin": "lín",
+        "tone": 2,
+        "tone_contour": "rising (´)",
+        "meaning": "forest",
+        "visual_pieces": ["木", "木"],
+        "component_meanings": { "木": "tree" },
+        "component_pinyin": { "木": "mù" },
+        "binding_constraint": "Bind the visual pieces (tree, tree) with the sound 'lín' and the 2nd rising tone into a scene that means 'forest' — two trees together make a forest.",
+        "leading_question": "What do two trees together make?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "One tree (木), then another tree (木) beside it — together they rise (lín) into a forest!",
+        "tags": ["nature", "hs2"],
+        "family": "tree-compounds"
+      },
+      {
+        "id": "PRS-0021",
+        "character": "森",
+        "pinyin": "sēn",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "dense forest",
+        "visual_pieces": ["木", "木", "木"],
+        "component_meanings": { "木": "tree" },
+        "component_pinyin": { "木": "mù" },
+        "binding_constraint": "Bind the visual pieces (tree, tree, tree) with the sound 'sēn' and the 1st high and flat tone into a scene that means 'dense forest' — three trees make a dense forest.",
+        "leading_question": "What do three trees together make?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "Tree (木), tree (木), tree (木) — flat and dense (sēn) — a dense forest!",
+        "tags": ["nature", "hs2"],
+        "family": "tree-compounds"
+      },
+      {
+        "id": "PRS-0022",
+        "character": "休",
+        "pinyin": "xiū",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "rest",
+        "visual_pieces": ["亻", "木"],
+        "component_meanings": { "亻": "person", "木": "tree" },
+        "component_pinyin": { "亻": "rén", "木": "mù" },
+        "binding_constraint": "Bind the visual pieces (a person, a tree) with the sound 'xiū' and the 1st high and flat tone into a scene that means 'rest' — a person leaning on a tree to rest.",
+        "leading_question": "What is a person doing beside a tree?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "A person (亻) leans on a tree (木) — 'Shoo (xiū), I'm resting!' — flat and calm.",
+        "tags": ["action", "hs2"],
+        "family": "tree-compounds"
+      },
+      {
+        "id": "PRS-0023",
+        "character": "看",
+        "pinyin": "kàn",
+        "tone": 4,
+        "tone_contour": "falling (ˋ)",
+        "meaning": "to look / watch",
+        "visual_pieces": ["手", "目"],
+        "component_meanings": { "手": "hand", "目": "eye" },
+        "component_pinyin": { "手": "shǒu", "目": "mù" },
+        "binding_constraint": "Bind the visual pieces (a hand over an eye) with the sound 'kàn' and the 4th falling tone into a scene that means 'to look / watch' — a hand shading the eye to look into the distance.",
+        "leading_question": "What is a hand doing over an eye?",
+        "connections": {
+          "component_to_action": true,
+          "identity_link": true,
+          "causal_order": true,
+          "sound_in_action": true,
+          "tone_in_word": true,
+          "meaning_as_payoff": true
+        },
+        "integrity_test": {
+          "remove_shape": "collapses",
+          "remove_form": "collapses",
+          "remove_pinyin": "collapses",
+          "remove_tone": "collapses",
+          "remove_meaning": "collapses"
+        },
+        "scene_example": "A hand (手) over an eye (目) — 'Can (kàn) you see?' — the hand drops down to look — to look / watch!",
+        "tags": ["action", "hs2"],
+        "family": "body-compounds"
+      }
+    ]
+  }
+}
