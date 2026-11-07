@@ -1,0 +1,82 @@
+{
+  “characternet”: {
+    “version”: “2.0”,
+    “last_updated”: “2026-11-06”,
+    “framework”: “PRS — Picture, Retrieve, Story”,
+    “architecture”: “The Periodic Table of 256 Atomic Visual Components. Maps the human perceptual eye to the structural building blocks of Chinese characters.”,
+    “characters”: [
+      {
+        “id”: “ATOM-0001”,
+        “character”: “日”,
+        “pinyin”: “rì”,
+        “tone”: 4,
+        “tone_contour”: “falling (ˋ)”,
+        “meaning”: “sun, day”,
+        “is_moe_atom”: true,
+        “visual_pieces”: [“日”],
+        “component_meanings”: { “日”: “the sun” },
+        “component_pinyin”: { “日”: “rì” },
+        “binding_constraint”: “Bind the visual piece (the sun) with the sound ‘rì’ and the 4th falling tone into a scene that means ‘sun, day’.”,
+        “connections”: {
+          “component_to_action”: true, “identity_link”: true, “causal_order”: true, “sound_in_action”: true, “tone_in_word”: true, “meaning_as_payoff”: true
+        },
+        “tags”: [“nature”, “time”, “hs1”],
+        “family”: “nature”
+      },
+      {
+        “id”: “ATOM-0002”,
+        “character”: “白”,
+        “pinyin”: “bái”,
+        “tone”: 2,
+        “tone_contour”: “rising (´)”,
+        “meaning”: “white”,
+        “is_moe_atom”: true,
+        “visual_pieces”: [“日”, “丿”],
+        “component_meanings”: { “日”: “the sun”, “丿”: “a hand waving bye” },
+        “component_pinyin”: { “日”: “rì”, “丿”: “piě” },
+        “binding_constraint”: “Bind the visual pieces (the sun, and a hand waving bye) with the sound ‘bái’ (bye) and the 2nd rising tone into a scene that means ‘white’ — a clear white sky day.”,
+        “connections”: {
+          “component_to_action”: true, “identity_link”: true, “causal_order”: true, “sound_in_action”: true, “tone_in_word”: true, “meaning_as_payoff”: true
+        },
+        “tags”: [“nature”, “colours”, “hs1”],
+        “family”: “colours”
+      },
+      {
+        “id”: “ATOM-0003”,
+        “character”: “八”,
+        “pinyin”: “bā”,
+        “tone”: 1,
+        “tone_contour”: “flat (ˉ)”,
+        “meaning”: “eight”,
+        “is_moe_atom”: true,
+        “visual_pieces”: [“八”],
+        “component_meanings”: { “八”: “two splayed legs of a sheep standing front-on” },
+        “component_pinyin”: { “八”: “bā” },
+        “binding_constraint”: “Bind the visual pieces (two splayed legs of a sheep standing front-on) with the sound ‘bā’ and the 1st high and flat tone into a scene that means ‘eight’ — 8 parts: 2 ears, 2 eyes, 2 sets of 2 legs.”,
+        “connections”: {
+          “component_to_action”: true, “identity_link”: true, “causal_order”: true, “sound_in_action”: true, “tone_in_word”: true, “meaning_as_payoff”: true
+        },
+        “tags”: [“number”, “hs1”],
+        “family”: “circus-numbers”
+      },
+      {
+        “id”: “ATOM-0004”,
+        “character”: “本”,
+        “pinyin”: “běn”,
+        “tone”: 3,
+        “tone_contour”: “dip-rise (ˇ)”,
+        “meaning”: “root, origin”,
+        “is_moe_atom”: true,
+        “visual_pieces”: [“木”, “一”],
+        “component_meanings”: { “木”: “a tree”, “一”: “a line at the base (the root)” },
+        “component_pinyin”: { “木”: “mù”, “一”: “yī” },
+        “binding_constraint”: “Bind the visual pieces (a tree, and a line at the base) with the sound ‘běn’ and the 3rd dip-rise tone into a scene that means ‘root’ — pointing to the root of the tree.”,
+        “connections”: {
+          “component_to_action”: true, “identity_link”: true, “causal_order”: true, “sound_in_action”: true, “tone_in_word”: true, “meaning_as_payoff”: true
+        },
+        “tags”: [“nature”, “abstract”, “hs2”],
+        “family”: “tree-compounds”
+      }
+    ]
+  }
+}
