@@ -1,81 +1,351 @@
 {
-  “characternet”: {
-    “version”: “2.0”,
-    “last_updated”: “2026-11-07”,
-    “framework”: “PRS — Picture, Retrieve, Story”,
-    “architecture”: “The Periodic Table of 256 Atomic Visual Components. Maps the human perceptual eye to the structural building blocks of Chinese characters.”,
-    “characters”: [
+  "characternet": {
+    "version": "2.0",
+    "last_updated": "2026-11-07",
+    "framework": "PRS -- Picture, Retrieve, Story",
+    "architecture": "The Periodic Table of 256 Atomic Visual Components. Maps the human perceptual eye to the structural building blocks of Chinese characters.",
+    "characters": [
       {
-        “id”: “ATOM-0001”,
-        “character”: “日”,
-        “pinyin”: “rì”,
-        “tone”: 4,
-        “tone_contour”: “falling (ˋ)”,
-        “meaning”: “sun, day”,
-        “is_moe_atom”: true,
-        “visual_pieces”: [“日”],
-        “component_meanings”: { “日”: “the sun” },
-        “component_pinyin”: { “日”: “rì” },
-        “binding_constraint”: “Bind the visual piece (the sun) with the sound ‘rì’ and the 4th falling tone into a scene that means ‘sun, day’.”,
-        “connections”: {
-          “component_to_action”: true, “identity_link”: true, “causal_order”: true, “sound_in_action”: true, “tone_in_word”: true, “meaning_as_payoff”: true
+        "id": "ATOM-0001",
+        "character": "日",
+        "pinyin": "rì",
+        "tone": 4,
+        "tone_contour": "falling (ˋ)",
+        "meaning": "sun, day",
+        "is_moe_atom": true,
+        "visual_pieces": ["日"],
+        "component_meanings": { "日": "the sun" },
+        "component_pinyin": { "日": "rì" },
+        "binding_constraint": "Bind the visual piece (the sun) with the sound 'rì' and the 4th falling tone into a scene that means 'sun, day'.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
         },
-        “tags”: [“nature”, “time”, “hs1”],
-        “family”: “nature”
+        "tags": ["nature", "time", "hs1"],
+        "family": "nature"
       },
       {
-        “id”: “ATOM-0002”,
-        “character”: “白”,
-        “pinyin”: “bái”,
-        “tone”: 2,
-        “tone_contour”: “rising (´)”,
-        “meaning”: “white”,
-        “is_moe_atom”: true,
-        “visual_pieces”: [“日”, “丿”],
-        “component_meanings”: { “日”: “the sun”, “丿”: “a hand waving bye” },
-        “component_pinyin”: { “日”: “rì”, “丿”: “piě” },
-        “binding_constraint”: “Bind the visual pieces (the sun, and a hand waving bye) with the sound ‘bái’ (bye) and the 2nd rising tone into a scene that means ‘white’ — a clear white sky day.”,
-        “connections”: {
-          “component_to_action”: true, “identity_link”: true, “causal_order”: true, “sound_in_action”: true, “tone_in_word”: true, “meaning_as_payoff”: true
+        "id": "ATOM-0002",
+        "character": "白",
+        "pinyin": "bái",
+        "tone": 2,
+        "tone_contour": "rising (')",
+        "meaning": "white",
+        "is_moe_atom": true,
+        "visual_pieces": ["日", "丿"],
+        "component_meanings": { "日": "the sun", "丿": "a hand waving bye" },
+        "component_pinyin": { "日": "rì", "丿": "piě" },
+        "binding_constraint": "Bind the visual pieces (the sun, and a hand waving bye) with the sound 'bái' (bye) and the 2nd rising tone into a scene that means 'white' -- a clear white sky day.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
         },
-        “tags”: [“nature”, “colours”, “hs1”],
-        “family”: “colours”
+        "tags": ["nature", "colours", "hs1"],
+        "family": "colours"
       },
       {
-        “id”: “ATOM-0003”,
-        “character”: “八”,
-        “pinyin”: “bā”,
-        “tone”: 1,
-        “tone_contour”: “flat (ˉ)”,
-        “meaning”: “eight”,
-        “is_moe_atom”: true,
-        “visual_pieces”: [“八”],
-        “component_meanings”: { “八”: “two splayed legs of a sheep standing front-on” },
-        “component_pinyin”: { “八”: “bā” },
-        “binding_constraint”: “Bind the visual pieces (two splayed legs of a sheep standing front-on) with the sound ‘bā’ and the 1st high and flat tone into a scene that means ‘eight’ — 8 parts: 2 ears, 2 eyes, 2 sets of 2 legs.”,
-        “connections”: {
-          “component_to_action”: true, “identity_link”: true, “causal_order”: true, “sound_in_action”: true, “tone_in_word”: true, “meaning_as_payoff”: true
+        "id": "ATOM-0003",
+        "character": "八",
+        "pinyin": "bā",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "eight",
+        "is_moe_atom": true,
+        "visual_pieces": ["八"],
+        "component_meanings": { "八": "two splayed legs of a sheep standing front-on" },
+        "component_pinyin": { "八": "bā" },
+        "binding_constraint": "Bind the visual pieces (two splayed legs of a sheep standing front-on) with the sound 'bā' and the 1st high and flat tone into a scene that means 'eight' -- 8 parts: 2 ears, 2 eyes, 2 sets of 2 legs.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
         },
-        “tags”: [“number”, “hs1”],
-        “family”: “circus-numbers”
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
       },
       {
-        “id”: “ATOM-0004”,
-        “character”: “本”,
-        “pinyin”: “běn”,
-        “tone”: 3,
-        “tone_contour”: “dip-rise (ˇ)”,
-        “meaning”: “root, origin”,
-        “is_moe_atom”: true,
-        “visual_pieces”: [“木”, “一”],
-        “component_meanings”: { “木”: “a tree”, “一”: “a line at the base (the root)” },
-        “component_pinyin”: { “木”: “mù”, “一”: “yī” },
-        “binding_constraint”: “Bind the visual pieces (a tree, and a line at the base) with the sound ‘běn’ and the 3rd dip-rise tone into a scene that means ‘root’ — pointing to the root of the tree.”,
-        “connections”: {
-          “component_to_action”: true, “identity_link”: true, “causal_order”: true, “sound_in_action”: true, “tone_in_word”: true, “meaning_as_payoff”: true
+        "id": "ATOM-0004",
+        "character": "本",
+        "pinyin": "běn",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "root, origin",
+        "is_moe_atom": true,
+        "visual_pieces": ["木", "一"],
+        "component_meanings": { "木": "a tree", "一": "a line at the base (the root)" },
+        "component_pinyin": { "木": "mù", "一": "yī" },
+        "binding_constraint": "Bind the visual pieces (a tree, and a line at the base) with the sound 'běn' and the 3rd dip-rise tone into a scene that means 'root' -- pointing to the root of the tree.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
         },
-        “tags”: [“nature”, “abstract”, “hs2”],
-        “family”: “tree-compounds”
+        "tags": ["nature", "abstract", "hs2"],
+        "family": "tree-compounds"
+      },
+      {
+        "id": "ATOM-0005",
+        "character": "凹",
+        "pinyin": "āo",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "concave / sunken",
+        "is_moe_atom": true,
+        "visual_pieces": ["凹"],
+        "component_meanings": { "凹": "a sunken pit / dented Lego brick" },
+        "component_pinyin": { "凹": "āo" },
+        "binding_constraint": "Bind the visual piece (a sunken pit or dented bowl) with the sound 'āo' and the 1st flat tone into a scene that means 'concave'.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["shape", "hs2"],
+        "family": "shapes"
+      },
+      {
+        "id": "ATOM-0006",
+        "character": "巴",
+        "pinyin": "bā",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "to cling to / snake",
+        "is_moe_atom": true,
+        "visual_pieces": ["巳", "丨"],
+        "component_meanings": { "巳": "a coiled snake", "丨": "a wall" },
+        "component_pinyin": { "巳": "sì", "丨": "gǔn" },
+        "binding_constraint": "Bind the visual pieces (a coiled snake, a wall) with the sound 'bā' and the 1st flat tone into a scene that means 'to cling to'.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["animal", "action", "hs2"],
+        "family": "animals"
+      },
+      {
+        "id": "ATOM-0007",
+        "character": "百",
+        "pinyin": "bǎi",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "hundred",
+        "is_moe_atom": true,
+        "visual_pieces": ["一", "白"],
+        "component_meanings": { "一": "one", "白": "white (sun waving bye)" },
+        "component_pinyin": { "一": "yī", "白": "bái" },
+        "binding_constraint": "Bind the visual pieces (one, white) with the sound 'bǎi' and the 3rd dip-rise tone into a scene that means 'hundred' -- the sun waving bye, saying: I've just completed one hundred solar cycles.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "ATOM-0008",
+        "character": "办",
+        "pinyin": "bàn",
+        "tone": 4,
+        "tone_contour": "falling (ˋ)",
+        "meaning": "to handle / to do",
+        "is_moe_atom": true,
+        "visual_pieces": ["力", "八"],
+        "component_meanings": { "力": "a flexed arm / power", "八": "two spreading legs" },
+        "component_pinyin": { "力": "lì", "八": "bā" },
+        "binding_constraint": "Bind the visual pieces (a flexed arm, two spreading legs) with the sound 'bàn' and the 4th falling tone into a scene that means 'to handle / do'.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["action", "hs2"],
+        "family": "actions"
+      },
+      {
+        "id": "ATOM-0009",
+        "character": "半",
+        "pinyin": "bàn",
+        "tone": 4,
+        "tone_contour": "falling (ˋ)",
+        "meaning": "half",
+        "is_moe_atom": true,
+        "visual_pieces": ["丷", "二", "丨"],
+        "component_meanings": { "丷": "two horns / splitting drops", "二": "two horizontal lines", "丨": "a vertical spear" },
+        "component_pinyin": { "丷": "bā", "二": "èr", "丨": "gǔn" },
+        "binding_constraint": "Bind the visual pieces (two horns, two lines, a spear) with the sound 'bàn' and the 4th falling tone into a scene that means 'half' -- a spear cutting the sheep in half.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["quantity", "hs2"],
+        "family": "abstract"
+      },
+      {
+        "id": "ATOM-0010",
+        "character": "贝",
+        "pinyin": "bèi",
+        "tone": 4,
+        "tone_contour": "falling (ˋ)",
+        "meaning": "shell / cowrie",
+        "is_moe_atom": true,
+        "visual_pieces": ["冂", "人"],
+        "component_meanings": { "冂": "a box / shell", "人": "a person trapped inside" },
+        "component_pinyin": { "冂": "jiōng", "人": "rén" },
+        "binding_constraint": "Bind the visual pieces (a box, a person inside) with the sound 'bèi' and the 4th falling tone into a scene that means 'shell / cowrie'.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["nature", "object", "hs1"],
+        "family": "objects"
+      },
+      {
+        "id": "ATOM-0011",
+        "character": "匕",
+        "pinyin": "bǐ",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "spoon / dagger",
+        "is_moe_atom": true,
+        "visual_pieces": ["匕"],
+        "component_meanings": { "匕": "a spoon or an upside-down 7" },
+        "component_pinyin": { "匕": "bǐ" },
+        "binding_constraint": "Bind the visual piece (a spoon or upside-down 7) with the sound 'bǐ' and the 3rd dip-rise tone into a scene that means 'spoon'.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["object", "hs2"],
+        "family": "objects"
+      },
+      {
+        "id": "ATOM-0012",
+        "character": "七",
+        "pinyin": "qī",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "seven",
+        "is_moe_atom": true,
+        "visual_pieces": ["L", "一"],
+        "component_meanings": { "L": "an upside-down 7 shape", "一": "a cue-stick crossbar" },
+        "component_pinyin": { "L": "ell", "一": "yī" },
+        "binding_constraint": "Bind the visual pieces (an upside-down 7, a cue-stick crossbar) with the sound 'qī' and the 1st flat tone into a scene that means 'seven' -- using a cue stick to pull back an escaping sheep.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["number", "hs1"],
+        "family": "circus-numbers"
+      },
+      {
+        "id": "ATOM-0013",
+        "character": "才",
+        "pinyin": "cái",
+        "tone": 2,
+        "tone_contour": "rising (')",
+        "meaning": "talent / just now",
+        "is_moe_atom": true,
+        "visual_pieces": ["亅", "一", "丿"],
+        "component_meanings": { "亅": "a hook", "一": "a line", "丿": "a pulling stroke" },
+        "component_pinyin": { "亅": "jué", "一": "yī", "丿": "piě" },
+        "binding_constraint": "Bind the visual pieces (a hook, a line, a pulling stroke) with the sound 'cái' and the 2nd rising tone into a scene that means 'talent / just now' -- a catch is pulled up.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["abstract", "hs1"],
+        "family": "abstract"
+      },
+      {
+        "id": "ATOM-0014",
+        "character": "寸",
+        "pinyin": "cùn",
+        "tone": 4,
+        "tone_contour": "falling (ˋ)",
+        "meaning": "inch",
+        "is_moe_atom": true,
+        "visual_pieces": ["才", "丶"],
+        "component_meanings": { "才": "just now (catch pulled up)", "丶": "a dropped coin" },
+        "component_pinyin": { "才": "cái", "丶": "diǎn" },
+        "binding_constraint": "Bind the visual pieces (just now, a dropped coin) with the sound 'cùn' and the 4th falling tone into a scene that means 'inch' -- a coin dropped, an inch across.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["measurement", "hs1"],
+        "family": "measurements"
+      },
+      {
+        "id": "ATOM-0015",
+        "character": "大",
+        "pinyin": "dà",
+        "tone": 4,
+        "tone_contour": "falling (ˋ)",
+        "meaning": "big",
+        "is_moe_atom": true,
+        "visual_pieces": ["人", "一"],
+        "component_meanings": { "人": "a person", "一": "arms stretched wide" },
+        "component_pinyin": { "人": "rén", "一": "yī" },
+        "binding_constraint": "Bind the visual pieces (a person, arms stretched wide) with the sound 'dà' and the 4th falling tone into a scene that means 'big' -- a person with arms stretched wide looks dam big.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["size", "hs1"],
+        "family": "shapes"
+      },
+      {
+        "id": "ATOM-0016",
+        "character": "刀",
+        "pinyin": "dāo",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "knife",
+        "is_moe_atom": true,
+        "visual_pieces": ["刀"],
+        "component_meanings": { "刀": "a chopping knife" },
+        "component_pinyin": { "刀": "dāo" },
+        "binding_constraint": "Bind the visual piece (a chopping knife) with the sound 'dāo' and the 1st flat tone into a scene that means 'knife' -- down goes the chopping knife.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["object", "hs1"],
+        "family": "objects"
+      },
+      {
+        "id": "ATOM-0017",
+        "character": "丁",
+        "pinyin": "dīng",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "fourth heavenly stem / nail",
+        "is_moe_atom": true,
+        "visual_pieces": ["丁"],
+        "component_meanings": { "丁": "a flat-headed bent nail" },
+        "component_pinyin": { "丁": "dīng" },
+        "binding_constraint": "Bind the visual piece (a flat-headed bent nail) with the sound 'dīng' and the 1st flat tone into a scene that means 'nail' -- the nail got dinged.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["object", "hs1"],
+        "family": "objects"
+      },
+      {
+        "id": "ATOM-0018",
+        "character": "厂",
+        "pinyin": "chǎng",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "factory / cliff",
+        "is_moe_atom": true,
+        "visual_pieces": ["厂"],
+        "component_meanings": { "厂": "a factory tool / cliff" },
+        "component_pinyin": { "厂": "chǎng" },
+        "binding_constraint": "Bind the visual piece (a factory tool) with the sound 'chǎng' and the 3rd dip-rise tone into a scene that means 'factory' -- a factory tool that changes shape.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["place", "hs1"],
+        "family": "places"
+      },
+      {
+        "id": "ATOM-0019",
+        "character": "口",
+        "pinyin": "kǒu",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "mouth",
+        "is_moe_atom": true,
+        "visual_pieces": ["口"],
+        "component_meanings": { "口": "an open mouth" },
+        "component_pinyin": { "口": "kǒu" },
+        "binding_constraint": "Bind the visual piece (an open mouth) with the sound 'kǒu' and the 3rd dip-rise tone into a scene that means 'mouth' -- opening mouth to cough.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["body", "hs1"],
+        "family": "body"
       }
     ]
   }
