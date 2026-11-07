@@ -1,45 +1,29 @@
-# Dataset Card for CharacterNet
+# Dataset Card for CharacterNet v2.0
 
 ## Dataset Summary
-CharacterNet is an open-source dataset for the visual decomposition of Chinese characters. It is designed to provide AI researchers and developers with the visual "ground truth" of how the human eye perceives and breaks down Chinese characters, moving away from academic etymology and toward perceptual memory.
+CharacterNet v2.0 is the open-source visual ground-truth layer for Chinese characters, built on the official MoE 2009 256 Single-Component Standard. It powers the PRS™ Framework by providing the exact structural materials an AI or human needs to build the PRS Engine’s “Flat Pack & ZIP” scenes. 
+
+It explicitly **ignores historical etymology** and instead maps the character as the human eye perceives it (Visual Decomposition).
 
 This dataset is released under **CC BY 4.0**.
 
 ## Supported Tasks
-- **Visual Decomposition:** Extracting the visual sub-components (radicals/shapes) of Chinese characters.
-- **Phonetic and Semantic Mapping:** Linking visual pieces to pinyin, tone, and meaning.
-- **Mnemonic Generation (Input):** Providing the "binding constraints" required to train an AI to generate mnemonic stories.
+- **Visual Decomposition:** Extracting perceptual visual pieces (e.g., 兔 = ⺈ + 口 + 儿 + 丶).
+- **Constraint Generation:** Providing the exact `binding_constraint` that forces an AI to weave the pieces into a causal story.
 
-## Languages
-- Chinese (Simplified / Hanzi)
-- English (Metadata and Constraints)
+## Data Fields
+- `id`: Unique ID (e.g., ATOM-0001).
+- `character`: The Hanzi.
+- `pinyin` / `tone` / `tone_contour`: Phonetic and tonal metadata.
+- `is_moe_atom`: Boolean indicating if it is on the 256 standard list.
+- `visual_pieces`: The array of flat-pack pieces the eye sees.
+- `binding_constraint`: The strict instruction template for the AI.
+- `connections`: The 6 load-bearing rules the generated story must satisfy.
 
-## Dataset Structure
-### Data Fields
-- `character`: The Chinese character (e.g., 兔).
-- `pinyin`: The romanized pronunciation (e.g., tù).
-- `tone`: The tone number (1-4).
-- `meaning`: The primary English meaning (e.g., rabbit).
-- `visual_pieces`: An array of the visual components the eye perceives (e.g., ["子", "儿", "口"]).
-- `binding_constraint`: An instruction template for story generation (e.g., "Bind the pieces... with the sound and tone...").
-
-## What is NOT Included (The Boundary)
-To protect the commercial application of this data, CharacterNet explicitly **does not include**:
-- Finished, absurd mnemonic stories (Semantic Multiplexing).
-- The commercial PRS Engine.
+## The Boundary (What is NOT Included)
+To protect the commercial PRS Chinese platform, CharacterNet does **not** include:
+- Finished mnemonic stories (the ZIP).
+- The PRS Engine prompt architecture.
 - Curriculum sequencing.
 
-For finished stories, commercial licensing, or educational tools, visit [PRS Chinese](https://www.prschinese.sg).
-
-## Source Data
-The data is manually curated by Abraham Praise, Creator of the PRS Framework, and expanded through the PRS Chinese platform.
-
-## Citation
-If you use CharacterNet in your research, please cite:
-@misc{praise2026characternet,
-title={CharacterNet: A Visual Decomposition Dataset for Chinese Character Learning},
-author={Praise, Abraham},
-year={2026},
-url={https://github.com/prsframework-coder/CharacterNet}
-}
-
+For the complete learning platform, visit [PRS Chinese](https://www.prschinese.sg).
