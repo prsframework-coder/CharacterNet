@@ -121,8 +121,8 @@
   </div>
 
   <footer>
-    <div>© 2026 CharacterNet · CC BY 4.0</div>
-    <div><a href="https://github.com/prsframework-coder/CharacterNet" target="_blank">GitHub Dataset</a> · <a href="https://prschinese.sg" target="_blank">PRS Chinese</a></div>
+    <div>© 2026 CHARACTERNET · CC BY 4.0</div>
+    <div><a href="https://github.com/prsframework-coder/CharacterNet" target="_blank">GITHUB DATASET</a> · <a href="https://prschinese.sg" target="_blank">PRS CHINESE</a></div>
   </footer>
 </div>
 
@@ -157,8 +157,26 @@ const ATOMS_DATA = [
   { "character": "九", "pinyin": "jiǔ", "tone": 3, "meaning": "nine", "visual_pieces": ["丿", "一", "乚"], "component_pinyin": {"丿": "piě", "一": "yī", "乚": "yǐn"}, "component_meanings": {"丿": "leg stroke", "一": "one line", "乚": "curled tail"} },
   { "character": "十", "pinyin": "shí", "tone": 2, "meaning": "ten", "visual_pieces": ["十"], "component_pinyin": {"十": "shí"}, "component_meanings": {"十": "a crossbar"} },
   { "character": "儿", "pinyin": "ér", "tone": 2, "meaning": "son / child", "visual_pieces": ["儿"], "component_pinyin": {"儿": "ér"}, "component_meanings": {"儿": "a set of son/child legs"} },
-  { "character": "兔", "pinyin": "tù", "tone": 4, "meaning": "rabbit", "visual_pieces": ["⺈", "口", "儿", "丶"], "component_pinyin": {"⺈": "dāo", "口": "kǒu", "儿": "ér", "丶": "diǎn"}, "component_meanings": {"⺈": "the cap", "口": "the opening", "儿": "kicking legs", "丶": "the kicking point / dot"} },
-  { "character": "免", "pinyin": "miǎn", "tone": 3, "meaning": "to avoid", "visual_pieces": ["⺈", "口", "儿"], "component_pinyin": {"⺈": "dāo", "口": "kǒu", "儿": "ér"}, "component_meanings": {"⺈": "the cap", "口": "the opening", "儿": "meandering legs"} }
+  
+  // UPDATED ATOMS WITH "子" INSTEAD OF "⺈"
+  { 
+    "character": "兔", 
+    "pinyin": "tù", 
+    "tone": 4, 
+    "meaning": "rabbit", 
+    "visual_pieces": ["子", "口", "儿", "丶"], 
+    "component_pinyin": {"子": "zǐ", "口": "kǒu", "儿": "ér", "丶": "diǎn"}, 
+    "component_meanings": {"子": "a Child", "口": "the opening", "儿": "kicking legs", "丶": "the kicking point / dot"} 
+  },
+  { 
+    "character": "免", 
+    "pinyin": "miǎn", 
+    "tone": 3, 
+    "meaning": "to avoid", 
+    "visual_pieces": ["子", "口", "儿"], 
+    "component_pinyin": {"子": "zǐ", "口": "kǒu", "儿": "ér"}, 
+    "component_meanings": {"子": "a child", "口": "the opening", "儿": "meandering legs"} 
+  }
 ];
 
 let ATOMS = {}; 
