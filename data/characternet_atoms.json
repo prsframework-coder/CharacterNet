@@ -809,7 +809,7 @@
         "is_moe_atom": true,
         "visual_pieces": ["子", "口", "儿", "丶"],
         "component_meanings": {
-          "子": "A Child",
+          "子": "a Child",
           "口": "the opening",
           "儿": "kicking legs",
           "丶": "the kicking point / dot"
@@ -840,18 +840,18 @@
         "tone_contour": "dip-rise (ˇ)",
         "meaning": "to avoid",
         "is_moe_atom": true,
-        "visual_pieces": ["⺈", "口", "儿"],
+        "visual_pieces": ["子", "口", "儿"],
         "component_meanings": {
-          "⺈": "the cap",
+          "⺈": "a child",
           "口": "the opening",
           "儿": "meandering legs"
         },
         "component_pinyin": {
-          "⺈": "dāo",
+          "子": "zǐ",
           "口": "kǒu",
           "儿": "ér"
         },
-        "binding_constraint": "Bind the visual pieces (a cap, an opening, legs) with the sound 'miǎn' and the 3rd dip-rise tone into a scene that means 'to avoid' -- a child standing in front of an opening, meandering (miǎn) around the opening with his legs to avoid falling in. (Notice: no dot, no kick, no rabbit).",
+        "binding_constraint": "Bind the visual pieces (a child, an opening, legs) with the sound 'miǎn' and the 3rd dip-rise tone into a scene that means 'to avoid' -- a child standing in front of an opening, meandering (miǎn) around the opening with his legs to avoid falling in. (Notice: no dot, no kick, no rabbit).",
         "connections": {
           "component_to_action": true,
           "identity_link": true,
