@@ -807,20 +807,20 @@
         "tone_contour": "falling (ˋ)",
         "meaning": "rabbit",
         "is_moe_atom": true,
-        "visual_pieces": ["⺈", "口", "儿", "丶"],
+        "visual_pieces": ["子", "口", "儿", "丶"],
         "component_meanings": {
-          "⺈": "the cap",
+          "子": "A Child",
           "口": "the opening",
           "儿": "kicking legs",
           "丶": "the kicking point / dot"
         },
         "component_pinyin": {
-          "⺈": "dāo",
+          "子": "zǐ",
           "口": "kǒu",
           "儿": "ér",
           "丶": "diǎn"
         },
-        "binding_constraint": "Bind the visual pieces (a cap, an opening, legs, a dot) with the sound 'tù' and the 4th falling tone into a scene that means 'rabbit' -- a child standing in front of an opening, kicking a fuss with his legs to (tù) jump right in. Must be a rabbit.",
+        "binding_constraint": "Bind the visual pieces (a child, an opening, legs, a dot) with the sound 'tù' and the 4th falling tone into a scene that means 'rabbit' -- a child standing in front of an opening, kicking a fuss with his legs to (tù) jump right in. Must be a rabbit.",
         "connections": {
           "component_to_action": true,
           "identity_link": true,
