@@ -128,8 +128,8 @@ let ATOMS = {};
 
 async function init() {
   try {
-    // Ensure this matches your actual JSON filename exactly (case-sensitive on GitHub Pages)
-    const res = await fetch('./data/characternet_atoms.json');
+    // Ensure this matches your actual JSON filename exactly ( case-sensitive on GitHub Pages )
+    const res = await fetch('./characternet_atoms.json');
     if (!res.ok) throw new Error('Network response was not ok');
     
     const data = await res.json();
