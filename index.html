@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZÌWǍNG -- CharacterNet</title>
+<meta name="description" content="CharacterNet · The Periodic Table of Characters. Free, open-source visual decomposition under CC BY 4.0.">
+<style>
+  :root {
+    --ink: #111111;
+    --muted: #666;
+    --accent: #0058a3;
+    --bg: #f5f5f5;
+    --card: #ffffff;
+    --border: #cccccc;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .wrap { max-width: 800px; width: 100%; background: var(--card); padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+  
+  header { margin-bottom: 40px; border-bottom: 2px solid var(--ink); padding-bottom: 20px; }
+  .logo { font-size: 48px; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; line-height: 1; margin-bottom: 10px;}
+  .subtitle { font-size: 14px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .tagline { font-size: 18px; font-weight: 700; margin-top: 20px; }
+
+  .search-box { display: flex; gap: 0; margin-bottom: 40px; border: 2px solid var(--ink); }
+  .search-box input { flex: 1; padding: 16px; font-size: 24px; font-weight: 700; border: none; outline: none; }
+  .search-box input::placeholder { color: #ccc; font-weight: 400; }
+  .search-box button { padding: 0 32px; font-size: 16px; font-weight: 700; background: var(--ink); color: white; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+  .search-box button:hover { background: #333; }
+
+  .result-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
+  .big-char { font-size: 80px; font-weight: 900; line-height: 0.8; }
+  .meta-info { text-align: right; }
+  .meta-info h2 { font-size: 24px; font-weight: 700; text-transform: uppercase; }
+  .meta-info p { font-size: 16px; color: var(--muted); font-weight: 600; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 20px; border: 1px solid var(--border); }
+  th, td { padding: 12px 16px; text-align: left; border: 1px solid var(--border); }
+  th { font-size: 12px; font-weight: 700; text-transform: uppercase; background: #f9f9f9; letter-spacing: 0.5px; }
+  
+  .col-visual { width: 100px; text-align: center; background: #fafafa; }
+  .col-qty { width: 60px; text-align: center; font-weight: 700; }
+  .col-name { width: 45%; }
+  .col-pinyin { width: 25%; color: var(--accent); font-weight: 700; }
+
+  .piece-icon { font-size: 48px; font-weight: 500; line-height: 1; display: block; margin: 10px 0; }
+
+  .funnel { margin-top: 40px; border: 2px dashed var(--muted); padding: 30px; text-align: center; background: #fafafa; }
+  .funnel h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; }
+  .funnel p { font-size: 15px; color: var(--muted); margin-bottom: 20px; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .funnel .btn { display: inline-block; padding: 16px 32px; background: var(--accent); color: white; text-decoration: none; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; transition: background 0.2s; }
+  .funnel .btn:hover { background: #004080; }
+
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; font-weight: 600; text-transform: uppercase; flex-wrap: wrap; gap: 10px; }
+  footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
+  
+  .hidden { display: none; }
+  .error { color: #c8102e; font-weight: 700; text-align: center; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="logo">ZÌWǍNG</div>
+    <div class="subtitle">CharacterNet · The Periodic Table of Characters</div>
+    <div class="tagline">Zipped and Wangled together.</div>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="charInput" placeholder="Enter a character..." maxlength="1" autocomplete="off">
+    <button onclick="lookup()">Find</button>
+  </div>
+
+  <div class="error hidden" id="errorMsg">Article not found in CharacterNet database.</div>
+
+  <div id="resultArea" class="hidden">
+    <div class="result-header">
+      <div class="big-char" id="resChar"></div>
+      <div class="meta-info">
+        <h2 id="resMeaning"></h2>
+        <p id="resPinyin"></p>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th class="col-visual">Visual</th>
+          <th class="col-qty">Qty</th>
+          <th class="col-name">What the eye sees</th>
+          <th class="col-pinyin">Pinyin</th>
+        </tr>
+      </thead>
+      <tbody id="resTableBody">
+        <!-- Rows injected by JS -->
+      </tbody>
+    </table>
+
+    <div class="funnel">
+      <h3>Missing the Assembly Instructions?</h3>
+      <p>This picking list gives you the flat-pack atoms. <strong>PRS Chinese</strong> provides the step-by-step story to assemble them in your memory.</p>
+      <a href="https://prschinese.sg" target="_blank" class="btn">Get the Assembly Story →</a>
+    </div>
+  </div>
+
+  <footer>
+    <div>© 2026 CharacterNet · CC BY 4.0</div>
+    <div>
+      <a href="https://github.com/prsframework-coder/CharacterNet" target="_blank">GitHub Dataset</a> 
+      · 
+      <a href="https://prschinese.sg" target="_blank">PRS Chinese</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+let ATOMS = {}; 
+
+async function init() {
+  try {
+    // Ensure this matches your actual JSON filename exactly (case-sensitive on GitHub Pages)
+    const res = await fetch('characternet_atoms.json');
+    if (!res.ok) throw new Error('Network response was not ok');
+    
+    const data = await res.json();
+    data.characternet.characters.forEach(item => {
+      ATOMS[item.character] = item;
+    });
+  } catch (err) {
+    console.error("DB Load Error:", err);
+    document.getElementById('errorMsg').textContent = "System error: Could not load atomic database. Please check the JSON path.";
+    document.getElementById('errorMsg').classList.remove('hidden');
+  }
+}
+
+function lookup() {
+  const input = document.getElementById('charInput').value.trim();
+  const resultArea = document.getElementById('resultArea');
+  const error = document.getElementById('errorMsg');
+
+  resultArea.classList.add('hidden');
+  error.classList.add('hidden');
+
+  if (!input) return;
+
+  let displayData = {
+    character: input,
+    pinyin: "--",
+    tone: "--",
+    meaning: "Compound Character",
+    visual_pieces: [],
+    component_pinyin: {},
+    component_meanings: {}
+  };
+
+  if (ATOMS[input]) {
+    displayData = ATOMS[input];
+  } else {
+    // Mock data for compounds to show the atomic resolver in action
+    if (input === '林') {
+      displayData.pinyin = "lín";
+      displayData.tone = 2;
+      displayData.meaning = "forest";
+      displayData.visual_pieces = ["十", "八", "十", "八"]; 
+      displayData.component_pinyin = { "十": "shí", "八": "bā" };
+      displayData.component_meanings = { "十": "crossbar", "八": "splay legs" };
+    } else if (input === '明') {
+      displayData.pinyin = "míng";
+      displayData.tone = 2;
+      displayData.meaning = "bright";
+      displayData.visual_pieces = ["日", "月"];
+      displayData.component_pinyin = { "日": "rì", "月": "yuè" };
+      displayData.component_meanings = { "日": "the sun", "月": "the moon" };
+    } else {
+      error.classList.remove('hidden');
+      return;
+    }
+  }
+
+  document.getElementById('resChar').textContent = displayData.character;
+  document.getElementById('resMeaning').textContent = displayData.meaning;
+  document.getElementById('resPinyin').textContent = `${displayData.pinyin} · Tone ${displayData.tone}`;
+
+  const tbody = document.getElementById('resTableBody');
+  tbody.innerHTML = ''; 
+
+  const pieceCounts = {};
+  displayData.visual_pieces.forEach(p => {
+    pieceCounts[p] = (pieceCounts[p] || 0) + 1;
+  });
+
+  const uniquePieces = [...new Set(displayData.visual_pieces)];
+
+  uniquePieces.forEach((piece) => {
+    const tr = document.createElement('tr');
+    
+    // 1. The Visual Piece
+    const tdVisual = document.createElement('td');
+    tdVisual.className = 'col-visual';
+    tdVisual.innerHTML = `<span class="piece-icon">${piece}</span>`;
+    
+    // 2. Quantity
+    const tdQty = document.createElement('td');
+    tdQty.className = 'col-qty';
+    tdQty.textContent = `${pieceCounts[piece]}x`;
+    
+    // 3. What the eye sees
+    const tdName = document.createElement('td');
+    tdName.className = 'col-name';
+    tdName.textContent = displayData.component_meanings[piece] || 'Unnamed component';
+    
+    // 4. Pinyin
+    const tdPinyin = document.createElement('td');
+    tdPinyin.className = 'col-pinyin';
+    tdPinyin.textContent = displayData.component_pinyin[piece] || '--';
+
+    tr.appendChild(tdVisual);
+    tr.appendChild(tdQty);
+    tr.appendChild(tdName);
+    tr.appendChild(tdPinyin);
+    
+    tbody.appendChild(tr);
+  });
+
+  resultArea.classList.remove('hidden');
+}
+
+document.getElementById('charInput').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') lookup();
+});
+
+init();
+</script>
+
+</body>
+</html>
