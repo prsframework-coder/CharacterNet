@@ -3,41 +3,72 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZÌWǍNG -- CharacterNet</title>
+<title>CharacterNet -- The Atomic Periodic Table of Chinese Characters</title>
+<meta name="description" content="CharacterNet: The atomic periodic table of Chinese characters. Free, open-source visual decomposition under CC BY 4.0.">
 <style>
-  :root { --ink: #111111; --muted: #666; --accent: #0058a3; --bg: #f5f5f5; --card: #ffffff; --border: #cccccc; }
+  :root {
+    --ink: #111111;
+    --muted: #666;
+    --accent: #0058a3; /* IKEA Blue */
+    --bg: #f5f5f5;
+    --card: #ffffff;
+    --border: #cccccc;
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.5; padding: 40px 20px; display: flex; justify-content: center; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
   .wrap { max-width: 800px; width: 100%; background: var(--card); padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+  
+  /* Header Styles */
   header { margin-bottom: 40px; border-bottom: 2px solid var(--ink); padding-bottom: 20px; }
-  .logo { font-size: 48px; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; line-height: 1; margin-bottom: 10px;}
-  .subtitle { font-size: 14px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
-  .tagline { font-size: 18px; font-weight: 700; margin-top: 20px; }
+  .logo { font-size: 48px; font-weight: 900; letter-spacing: -1.5px; text-transform: uppercase; line-height: 1; margin-bottom: 12px; color: var(--ink); }
+  .subtitle { font-size: 14px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; }
+  .subtitle span.zh { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 2px; color: var(--ink); }
+
+  /* Search Box */
   .search-box { display: flex; gap: 0; margin-bottom: 40px; border: 2px solid var(--ink); }
   .search-box input { flex: 1; padding: 16px; font-size: 24px; font-weight: 700; border: none; outline: none; }
   .search-box input::placeholder { color: #ccc; font-weight: 400; }
   .search-box button { padding: 0 32px; font-size: 16px; font-weight: 700; background: var(--ink); color: white; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
   .search-box button:hover { background: #333; }
+
+  /* Result Area */
   .result-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 20px; }
   .big-char { font-size: 80px; font-weight: 900; line-height: 0.8; }
   .meta-info { text-align: right; }
   .meta-info h2 { font-size: 24px; font-weight: 700; text-transform: uppercase; }
   .meta-info p { font-size: 16px; color: var(--muted); font-weight: 600; }
+
+  /* The Picking List Table */
   table { width: 100%; border-collapse: collapse; margin-top: 20px; border: 1px solid var(--border); }
   th, td { padding: 12px 16px; text-align: left; border: 1px solid var(--border); }
   th { font-size: 12px; font-weight: 700; text-transform: uppercase; background: #f9f9f9; letter-spacing: 0.5px; }
+  
   .col-visual { width: 100px; text-align: center; background: #fafafa; }
   .col-qty { width: 60px; text-align: center; font-weight: 700; }
   .col-name { width: 45%; }
   .col-pinyin { width: 25%; color: var(--accent); font-weight: 700; }
+
   .piece-icon { font-size: 48px; font-weight: 500; line-height: 1; display: block; margin: 10px 0; }
+
+  /* The PRS Funnel */
   .funnel { margin-top: 40px; border: 2px dashed var(--muted); padding: 30px; text-align: center; background: #fafafa; }
   .funnel h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; text-transform: uppercase; }
   .funnel p { font-size: 15px; color: var(--muted); margin-bottom: 20px; max-width: 500px; margin-left: auto; margin-right: auto; }
   .funnel .btn { display: inline-block; padding: 16px 32px; background: var(--accent); color: white; text-decoration: none; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; transition: background 0.2s; }
   .funnel .btn:hover { background: #004080; }
+
+  /* Footer */
   footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; font-weight: 600; text-transform: uppercase; flex-wrap: wrap; gap: 10px; }
   footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
+  
   .hidden { display: none; }
   .error { color: #c8102e; font-weight: 700; text-align: center; margin-top: 20px; }
 </style>
@@ -46,9 +77,10 @@
 
 <div class="wrap">
   <header>
-    <div class="logo">ZÌWǍNG</div>
-    <div class="subtitle">CharacterNet · The Periodic Table of Characters</div>
-    <div class="tagline">Zipped and Wangled together.</div>
+    <div class="logo">CharacterNet</div>
+    <div class="subtitle">
+      <span class="zh">子网</span> · The Chinese Character Atomic Periodic Table
+    </div>
   </header>
 
   <div class="search-box">
@@ -76,7 +108,9 @@
           <th class="col-pinyin">Pinyin</th>
         </tr>
       </thead>
-      <tbody id="resTableBody"></tbody>
+      <tbody id="resTableBody">
+        <!-- Rows injected by JS -->
+      </tbody>
     </table>
 
     <div class="funnel">
