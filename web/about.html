@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About CharacterNet -- Designed by Abraham</title>
+<style>
+  :root {
+    --ink: #111111;
+    --bg: #f4f4f4;
+    --white: #ffffff;
+    --accent: #0058a3;
+    --border: 2px solid var(--ink);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .manual-page {
+    max-width: 900px;
+    width: 100%;
+    background: var(--white);
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  .header-bar {
+    border-bottom: var(--border);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .brand h1 { font-size: 36px; font-weight: 900; letter-spacing: -1.5px; text-transform: uppercase; line-height: 1; }
+  .brand p { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #666; margin-top: 6px; }
+  .nav-links a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    margin-left: 20px;
+  }
+  .nav-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* Main Content */
+  .content-area { padding: 60px 40px; }
+  
+  .story-grid {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .story-text { flex: 1; }
+  .story-text h2 { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 20px; letter-spacing: -0.5px; }
+  .story-text p { font-size: 16px; margin-bottom: 20px; color: #333; }
+  .story-text strong { font-weight: 800; color: var(--ink); }
+
+  /* The Creator Card */
+  .creator-card {
+    border: var(--border);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    background: #fafafa;
+  }
+  
+  /* The Black & White Image */
+  .creator-image {
+    width: 160px;
+    height: 160px;
+    border: var(--border);
+    background: var(--white);
+    object-fit: cover;
+  }
+  
+  .creator-quote { flex: 1; }
+  .creator-quote h3 { font-size: 20px; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; }
+  .creator-quote p { font-size: 16px; font-style: italic; color: #444; }
+
+  /* Funnel */
+  .funnel-section {
+    border: 2px dashed #666;
+    margin: 0 40px 40px 40px;
+    padding: 40px;
+    text-align: center;
+    background: #fafafa;
+  }
+  .funnel-section h2 { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
+  .funnel-section p { font-size: 16px; color: #666; margin-bottom: 25px; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .btn-accent {
+    display: inline-block;
+    padding: 18px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: var(--accent);
+    color: var(--white);
+    border: var(--border);
+  }
+  .btn-accent:hover { background: #004080; }
+
+  /* Footer */
+  .footer-bar {
+    border-top: var(--border);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #666;
+  }
+  .footer-bar a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .story-grid { flex-direction: column; }
+    .creator-card { flex-direction: column; text-align: center; }
+    .nav-links a { margin-left: 0; margin-right: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="manual-page">
+  
+  <!-- HEADER -->
+  <header class="header-bar">
+    <div class="brand">
+      <h1>CHARACTERNET</h1>
+      <p>The Visual Atomic Periodic Table for Chinese Characters</p>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="app.html">Lookup Tool</a>
+    </div>
+  </header>
+
+  <!-- MAIN STORY CONTENT -->
+  <div class="content-area">
+    <div class="story-grid">
+      
+      <!-- Left Side: The AI Story -->
+      <div class="story-text">
+        <h2>Once upon a time, AI was blind.</h2>
+        <p>It could read entire libraries, but a picture of a cat was just a grid of numbers. Then, a scientist named Fei-Fei Li built <strong>ImageNet</strong>--a treasure map of millions of pictures. Suddenly, AI opened its eyes and could see the world.</p>
+        
+        <p>Years passed, and AI became super smart. But one day, a 59-year-old man sat down to learn Chinese. He looked at a character and asked DeepSeek AI, <em>"How do I remember this?"</em></p>
+        
+        <p>AI replied with the proven methods: <em>"Write it many times over and over again. Memorize the radicals by associating them with images. Use spaced repetition drills etc."</em></p>
+        
+        <p>The man blinked. Those methods were built for the classroom, but they didn't fit his brain. <strong>Once again, AI was blind.</strong> Not to images this time--but to the visual puzzle of the Chinese character right in front of its eyes. It knew the dictionary, but it couldn't see the window frame or the legs of the 月 Chinese character.</p>
+        
+        <p>So the man said to DeepSeek, <em>"My learning style is different. It is very visual. It is very childish."</em> And he set out to build a new way for AI to see.</p>
+      </div>
+
+      <!-- Right Side: The Solution & Creator -->
+      <div class="story-text">
+        <h2>Enter CharacterNet.</h2>
+        <p>Four months later, that man--Abraham Praise--had built the PRS Engine, launched the commercial platform, and created CharacterNet: an open-source dataset of the 256 foundational visual building blocks of Chinese writing.</p>
+        
+        <p>We didn't map the ancient etymology. We mapped the visual shapes. The bricks of the language.</p>
+
+        <!-- THE IKEA CREATOR CARD -->
+        <div class="creator-card">
+          <!-- Make sure the image is named abraham.jpg and is in the same folder -->
+          <img src="abraham.jpg" alt="Abraham Praise" class="creator-image">
+          <div class="creator-quote">
+            <h3>Designed by Abraham.</h3>
+            <p>"I built this for visual learners like me. I wanted to look at a Chinese character and not see a dusty dictionary, but a box of Lego pieces. Take the pieces, snap them together, and have fun building a sticky, hilarious story around them. That is how it sticks. You are the pilot. I just built the airspace."</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FUNNEL -->
+  <div class="funnel-section">
+    <h2>READY TO ASSEMBLE?</h2>
+    <p>The visual pieces are free. If you want the step-by-step story to lock them into your memory, visit PRS Chinese.</p>
+    <a href="https://prschinese.sg" target="_blank" class="btn-accent">
+      ASSEMBLE IN PRS CHINESE →
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-bar">
+    <div>© 2026 CHARACTERNET · CC BY 4.0</div>
+    <div>
+      <a href="https://github.com/prsframework-coder/CharacterNet" target="_blank">GitHub Dataset</a> · 
+      <a href="https://prschinese.sg" target="_blank">PRS Chinese</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
