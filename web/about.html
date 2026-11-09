@@ -71,19 +71,22 @@
     border: var(--border);
     padding: 30px;
     display: flex;
+    flex-direction: column; /* Stack vertically by default for mobile */
     align-items: center;
-    gap: 30px;
+    text-align: center;
+    gap: 20px;
     margin-top: 40px;
     background: #fafafa;
   }
   
   /* The Black & White Image */
   .creator-image {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     border: var(--border);
     background: var(--white);
     object-fit: cover;
+    flex-shrink: 0;
   }
   
   .creator-quote { flex: 1; }
@@ -129,8 +132,16 @@
   /* Responsive */
   @media (max-width: 768px) {
     .story-grid { flex-direction: column; }
-    .creator-card { flex-direction: column; text-align: center; }
     .nav-links a { margin-left: 0; margin-right: 15px; }
+  }
+  
+  /* Desktop layout for the creator card */
+  @media (min-width: 769px) {
+    .creator-card {
+      flex-direction: row; /* Side-by-side on desktop */
+      text-align: left;
+      align-items: flex-start;
+    }
   }
 </style>
 </head>
@@ -144,7 +155,7 @@
       <h1>CHARACTERNET</h1>
       <p>The Visual Atomic Periodic Table for Chinese Characters</p>
     </div>
-   <div class="nav-links">
+    <div class="nav-links">
       <a href="index.html">HOME</a>
       <a href="app.html">LOOKUP TOOL</a>
     </div>
@@ -177,7 +188,6 @@
 
         <!-- THE IKEA CREATOR CARD -->
         <div class="creator-card">
-          <!-- Make sure the image is named abraham.jpg and is in the same folder -->
           <img src="abraham.jpg" alt="Abraham Praise" class="creator-image">
           <div class="creator-quote">
             <h3>Designed by Abraham.</h3>
@@ -202,8 +212,8 @@
   <footer class="footer-bar">
     <div>© 2026 CHARACTERNET · CC BY 4.0</div>
     <div>
-      <a href="https://github.com/prsframework-coder/CharacterNet" target="_blank">GitHub Dataset</a> · 
-      <a href="https://prschinese.sg" target="_blank">PRS Chinese</a>
+      <a href="https://github.com/prsframework-coder/CharacterNet" target="_blank">GITHUB DATASET</a> · 
+      <a href="https://prschinese.sg" target="_blank">PRS CHINESE</a>
     </div>
   </footer>
 
