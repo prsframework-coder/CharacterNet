@@ -3,110 +3,320 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CharacterNet -- 字网 | The Visual Foundation for Chinese Literacy</title>
-<meta name="description" content="ImageNet taught machines to see. CharacterNet teaches them to read. An open-source visual foundation mapping Chinese characters the way the human eye sees them.">
+<title>CharacterNet -- The Visual Atomic Periodic Table for Chinese Characters</title>
+<meta name="description" content="ImageNet taught machines to see. CharacterNet teaches them to read. The open-source visual foundation for Chinese characters.">
 <style>
   :root {
     --ink: #111111;
-    --muted: #666;
+    --bg: #f4f4f4;
+    --white: #ffffff;
     --accent: #0058a3; /* IKEA Blue */
-    --bg: #f5f5f5;
-    --card: #ffffff;
-    --border: #cccccc;
+    --border: 2px solid var(--ink);
   }
+  
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: var(--bg);
     color: var(--ink);
-    line-height: 1.6;
+    line-height: 1.4;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
   }
-  .wrap { max-width: 800px; width: 100%; background: var(--card); padding: 50px 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-  
-  /* Header */
-  header { margin-bottom: 60px; text-align: center; }
-  .logo { font-size: 52px; font-weight: 900; letter-spacing: -1.5px; text-transform: uppercase; line-height: 1; margin-bottom: 12px; }
-  .subtitle { font-size: 15px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; }
-  .subtitle span.zh { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; font-size: 18px; font-weight: 600; color: var(--ink); margin-right: 8px; }
 
-  /* Hero Section */
-  .hero { text-align: center; margin-bottom: 60px; }
-  .hero h1 { font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.5px; }
-  .hero p { font-size: 18px; color: var(--muted); max-width: 600px; margin: 0 auto 30px; font-weight: 400; }
-  
-  /* Buttons */
-  .btn-group { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
-  .btn { display: inline-block; padding: 16px 32px; font-size: 16px; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; border-radius: 4px; transition: all 0.2s; }
-  .btn-primary { background: var(--ink); color: white; }
+  /* The Main Canvas */
+  .manual-page {
+    max-width: 900px;
+    width: 100%;
+    background: var(--white);
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Top Header Bar */
+  .header-bar {
+    border-bottom: var(--border);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .brand h1 {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .brand p {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    margin-top: 6px;
+  }
+  .nav-links a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+    margin-left: 20px;
+  }
+  .nav-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* Main Split Layout */
+  .split-layout {
+    display: flex;
+    flex-direction: row;
+    border-bottom: var(--border);
+  }
+
+  /* Left Side: The Copy */
+  .copy-side {
+    flex: 1;
+    padding: 60px 40px;
+    border-right: var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .headline {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  .headline span {
+    color: #999;
+  }
+  .subhead {
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 40px;
+    max-width: 400px;
+  }
+
+  /* The Buttons */
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 300px;
+  }
+  .btn {
+    display: block;
+    padding: 18px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border: var(--border);
+    transition: background 0.1s, color 0.1s;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--white);
+  }
   .btn-primary:hover { background: #333; }
-  .btn-secondary { background: var(--accent); color: white; }
-  .btn-secondary:hover { background: #004080; }
+  .btn-secondary {
+    background: var(--white);
+    color: var(--ink);
+  }
+  .btn-secondary:hover { background: #f4f4f4; }
 
-  /* Info Sections */
-  .section { margin-bottom: 50px; padding-top: 40px; border-top: 1px solid var(--border); }
-  .section h2 { font-size: 22px; font-weight: 800; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-  .section p { font-size: 16px; color: var(--muted); margin-bottom: 15px; }
-  
-  /* Code Block / IKEA Vibe */
-  .highlight-box { background: #fafafa; border-left: 4px solid var(--ink); padding: 20px; margin-top: 20px; font-family: monospace; font-size: 15px; color: var(--ink); }
-  
-  /* Footer */
-  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; font-weight: 600; text-transform: uppercase; flex-wrap: wrap; gap: 10px; }
-  footer a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
+  /* Right Side: The IKEA Visual */
+  .visual-side {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+  }
+
+  /* The Visual Diagram */
+  .diagram-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .parts-column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .part-box {
+    width: 60px;
+    height: 60px;
+    border: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background: var(--white);
+  }
+  .arrow {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--ink);
+  }
+  .final-char {
+    font-size: 140px;
+    font-weight: 500;
+    color: #999; /* Faded grey like the poster */
+    line-height: 0.8;
+    position: relative;
+  }
+  .caption {
+    margin-top: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    text-align: center;
+  }
+
+  /* The Funnel Section (Bottom) */
+  .funnel-section {
+    padding: 40px;
+    background: var(--white);
+    text-align: center;
+  }
+  .funnel-section h2 {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .funnel-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  .btn-accent {
+    display: inline-block;
+    padding: 18px 32px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: var(--accent);
+    color: var(--white);
+    border: var(--border);
+  }
+  .btn-accent:hover { background: #004080; }
+
+  /* Footer Bar */
+  .footer-bar {
+    border-top: var(--border);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #666;
+  }
+  .footer-bar a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .split-layout { flex-direction: column; }
+    .copy-side { border-right: none; border-bottom: var(--border); padding: 40px 20px; }
+    .visual-side { padding: 40px 20px; }
+    .headline { font-size: 32px; }
+    .final-char { font-size: 100px; }
+    .header-bar { flex-direction: column; gap: 20px; }
+    .nav-links a { margin-left: 0; margin-right: 20px; }
+  }
 </style>
 </head>
 <body>
 
-<div class="wrap">
-  <header>
-    <div class="logo">CHARACTERNET</div>
-    <div class="subtitle">
-      <span class="zh">字网 (ZǏWǍNG)</span> Atomic Periodic Table of Chinese Characters
+<div class="manual-page">
+  
+  <!-- HEADER -->
+  <header class="header-bar">
+    <div class="brand">
+      <h1>CHARACTERNET</h1>
+      <p>The Visual Atomic Periodic Table for Chinese Characters</p>
+    </div>
+    <div class="nav-links">
+      <a href="https://github.com/prsframework-coder/CharacterNet" target="_blank">GitHub</a>
+      <a href="app.html">Lookup Tool</a>
     </div>
   </header>
 
-  <div class="hero">
-    <h1>ImageNet taught machines to see.<br>CharacterNet teaches them to read.</h1>
-    <p>An open-source visual foundation that maps Chinese characters the way the human eye actually sees them -- not the way ancient scholars described them.</p>
+  <!-- MAIN HERO (IKEA SPLIT) -->
+  <div class="split-layout">
     
-    <div class="btn-group">
-      <a href="https://github.com/prsframework-coder/CharacterNet" target="_blank" class="btn btn-primary">Explore the Dataset on GitHub →</a>
-      <a href="app.html" class="btn btn-secondary">Try the Free Lookup Tool →</a>
+    <!-- LEFT: COPY & BUTTONS -->
+    <div class="copy-side">
+      <h2 class="headline">
+        <span>ImageNet taught machines to see.</span><br>
+        CharacterNet teaches them to read.
+      </h2>
+      <p class="subhead">
+        An open-source visual foundation that maps Chinese characters the way the human eye actually sees them--not the way ancient scholars described them.
+      </p>
+      
+      <div class="btn-group">
+        <a href="https://github.com/prsframework-coder/CharacterNet" target="_blank" class="btn btn-primary">Explore the Dataset</a>
+        <a href="app.html" class="btn btn-secondary">Try the Free Lookup Tool</a>
+      </div>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>What is CharacterNet?</h2>
-    <p>Traditional dictionaries break characters down by historical radicals and etymology. CharacterNet breaks them down into the <strong>visual shapes</strong> the eye actually perceives.</p>
-    <p>It is a free, CC BY 4.0 open-source dataset of the 256 foundational atomic building blocks that make up all Chinese writing.</p>
-    
-    <div class="highlight-box">
-      <strong>Example:</strong> 兔 (Rabbit)<br>
-      The eye does not see "a historical radical."<br>
-      The eye sees: A Child (子) + An Opening (口) + Legs (儿) + A Dot (丶).
+    <!-- RIGHT: THE IKEA DIAGRAM -->
+    <div class="visual-side">
+      <div class="diagram-container">
+        <!-- The Parts Column -->
+        <div class="parts-column">
+          <div class="part-box">子</div>
+          <div class="part-box">口</div>
+          <div class="part-box">儿</div>
+          <div class="part-box">丶</div>
+        </div>
+        
+        <!-- The Arrow -->
+        <div class="arrow">→</div>
+        
+        <!-- The Assembled Character -->
+        <div class="final-char">兔</div>
+      </div>
+      <div class="caption">
+        The eye sees the pieces. The mind sees the whole.
+      </div>
     </div>
+
   </div>
 
-  <div class="section">
-    <h2>Why Open Source?</h2>
-    <p>Because visual literacy should be a public utility. Developers, researchers, and educators are free to build upon this dataset to train AI models, build flashcard apps, or create new learning tools.</p>
-    <p>The visual decomposition is open. The storytelling engine is proprietary.</p>
+  <!-- THE FUNNEL -->
+  <div class="funnel-section">
+    <h2>Missing the Assembly Instructions?</h2>
+    <p>CharacterNet gives you the flat-pack pieces. But how do you actually remember them?<br>PRS Chinese provides the step-by-step, absurd, unforgettable stories to assemble them in your memory.</p>
+    <a href="https://prschinese.sg" target="_blank" class="btn-accent">Get the Assembly Story →</a>
   </div>
 
-  <div class="section">
-    <h2>Looking for the Assembly Instructions?</h2>
-    <p>CharacterNet gives you the flat-pack pieces. But how do you actually remember them?</p>
-    <p>That is where <strong>PRS Chinese</strong> comes in. It provides the step-by-step, absurd, unforgettable stories to assemble the pieces in your memory.</p>
-    <a href="https://prschinese.sg" target="_blank" class="btn btn-secondary" style="margin-top: 10px;">Get the Assembly Story at PRS Chinese →</a>
-  </div>
-
-  <footer>
+  <!-- FOOTER -->
+  <footer class="footer-bar">
     <div>© 2026 CHARACTERNET · CC BY 4.0</div>
-    <div><a href="https://github.com/prsframework-coder/CharacterNet" target="_blank">GITHUB DATASET</a> · <a href="https://prschinese.sg" target="_blank">PRS CHINESE</a></div>
+    <div>
+      <a href="https://github.com/prsframework-coder/CharacterNet" target="_blank">GitHub Dataset</a> · 
+      <a href="https://prschinese.sg" target="_blank">PRS Chinese</a>
+    </div>
   </footer>
+
 </div>
 
 </body>
