@@ -5,19 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About CharacterNet -- Designed by Abraham</title>
 <style>
-  :root {
-    --ink: #111111;
-    --bg: #f4f4f4;
-    --white: #ffffff;
-    --accent: #0058a3;
-    --border: 2px solid var(--ink);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
+    background: #f4f4f4;
+    color: #111111;
     line-height: 1.6;
+    margin: 0;
     padding: 40px 20px;
     display: flex;
     justify-content: center;
@@ -25,32 +18,31 @@
   .manual-page {
     max-width: 900px;
     width: 100%;
-    background: var(--white);
-    border: var(--border);
-    display: flex;
-    flex-direction: column;
+    background: #ffffff;
+    border: 2px solid #111111;
   }
 
   /* Header */
   .header-bar {
-    border-bottom: var(--border);
+    border-bottom: 2px solid #111111;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
   }
-  .brand h1 { font-size: 36px; font-weight: 900; letter-spacing: -1.5px; text-transform: uppercase; line-height: 1; }
-  .brand p { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #666; margin-top: 6px; }
+  .brand h1 { font-size: 36px; font-weight: 900; letter-spacing: -1.5px; margin: 0 0 5px 0; text-transform: uppercase; }
+  .brand p { font-size: 12px; font-weight: 700; text-transform: uppercase; color: #666; margin: 0; }
   .nav-links a {
-    color: var(--ink);
+    color: #111111;
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    border-bottom: 2px solid var(--ink);
+    border-bottom: 2px solid #111111;
     margin-left: 20px;
   }
-  .nav-links a:hover { color: var(--accent); border-color: var(--accent); }
 
   /* Main Content */
   .content-area { padding: 40px; }
@@ -61,7 +53,7 @@
     line-height: 1.2;
     margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: var(--border);
+    border-bottom: 2px solid #111111;
     text-align: center;
   }
 
@@ -75,14 +67,11 @@
 
   .story-card {
     flex: 1;
-    border: var(--border);
-    display: flex;
-    flex-direction: column;
-    background: var(--white);
+    border: 2px solid #111111;
   }
 
   .story-image {
-    border-bottom: var(--border);
+    border-bottom: 2px solid #111111;
     background: #fafafa;
     padding: 20px;
     text-align: center;
@@ -90,79 +79,58 @@
 
   .story-image img {
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
     height: auto;
     filter: grayscale(100%) contrast(120%);
   }
 
-  .story-copy {
-    padding: 25px;
-  }
+  .story-copy { padding: 25px; }
 
   .story-copy h2 {
     font-size: 18px;
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 15px;
-    color: var(--accent);
+    color: #0058a3;
+    margin-top: 0;
   }
 
-  .story-copy p {
-    font-size: 15px;
-    margin-bottom: 15px;
-    color: #333;
-  }
-
-  .story-copy strong { font-weight: 800; color: var(--ink); }
+  .story-copy p { font-size: 15px; margin-bottom: 15px; color: #333; }
+  .story-copy strong { font-weight: 800; color: #111111; }
 
   /* The Proof Box */
   .proof-box {
     background: #fafafa;
-    border: var(--border);
+    border: 2px solid #111111;
     padding: 30px;
     margin-bottom: 40px;
   }
-  
   .proof-box p { font-size: 16px; margin-bottom: 15px; color: #333; }
   .proof-box em { font-style: italic; color: #555; font-size: 15px; }
 
   /* The Handover */
-  .handover-box {
-    margin-bottom: 40px;
-  }
-  .handover-box h2 {
-    font-size: 20px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-  }
-  .handover-box p {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #333;
-  }
+  .handover-box { margin-bottom: 40px; }
+  .handover-box h2 { font-size: 20px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; }
+  .handover-box p { font-size: 16px; margin-bottom: 15px; color: #333; }
 
   /* The Creator Card */
   .creator-card {
-    border: var(--border);
+    border: 2px solid #111111;
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 20px;
-    background: var(--white);
+    background: #ffffff;
   }
-  
   .creator-image {
     width: 140px;
     height: 140px;
-    border: var(--border);
-    background: var(--white);
+    border: 2px solid #111111;
     object-fit: cover;
     filter: grayscale(100%) contrast(120%);
   }
-  
   .creator-quote { flex: 1; }
   .creator-quote h3 { font-size: 20px; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; }
   .creator-quote p { font-size: 16px; font-style: italic; color: #444; margin-bottom: 10px;}
@@ -176,8 +144,8 @@
     text-align: center;
     background: #fafafa;
   }
-  .funnel-section h2 { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
-  .funnel-section p { font-size: 16px; color: #666; margin-bottom: 25px; max-width: 500px; margin-left: auto; margin-right: auto; }
+  .funnel-section h2 { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; }
+  .funnel-section p { font-size: 16px; color: #666; margin-bottom: 25px; }
   .btn-accent {
     display: inline-block;
     padding: 18px 32px;
@@ -185,27 +153,26 @@
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    background: var(--accent);
-    color: var(--white);
-    border: var(--border);
+    background: #0058a3;
+    color: #ffffff;
+    border: 2px solid #111111;
   }
-  .btn-accent:hover { background: #004080; }
 
-  /* The Final Closing Banner */
+  /* Closing Banner */
   .closing-banner {
-    background: var(--ink);
-    color: var(--white);
+    background: #111111;
+    color: #ffffff;
     text-align: center;
     padding: 40px 20px;
     font-size: 22px;
     font-weight: 900;
     line-height: 1.4;
-    border-top: var(--border);
+    border-top: 2px solid #111111;
   }
 
   /* Footer */
   .footer-bar {
-    border-top: var(--border);
+    border-top: 2px solid #111111;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -213,23 +180,15 @@
     font-weight: 700;
     text-transform: uppercase;
     color: #666;
-    background: var(--white);
+    flex-wrap: wrap;
+    gap: 10px;
   }
-  .footer-bar a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
+  .footer-bar a { color: #111111; text-decoration: none; border-bottom: 1px solid #111111; }
 
-  /* Desktop Layout Adjustments */
+  /* Desktop Side-by-Side */
   @media (min-width: 800px) {
-    .parallel-grid {
-      flex-direction: row;
-    }
-    .story-card {
-      /* Cards sit side by side */
-    }
-    .creator-card {
-      flex-direction: row;
-      text-align: left;
-      align-items: flex-start;
-    }
+    .parallel-grid { flex-direction: row; }
+    .creator-card { flex-direction: row; text-align: left; align-items: flex-start; }
   }
   @media (max-width: 768px) {
     .nav-links a { margin-left: 0; margin-right: 15px; }
@@ -243,7 +202,6 @@
 
 <div class="manual-page">
   
-  <!-- HEADER -->
   <header class="header-bar">
     <div class="brand">
       <h1>CHARACTERNET</h1>
@@ -255,7 +213,6 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
   <div class="content-area">
     
     <div class="hero-statement">
@@ -263,13 +220,10 @@
       Bricks build the image in memory.
     </div>
 
-    <!-- The Parallel Stories (Side by Side on Desktop) -->
     <div class="parallel-grid">
       
-      <!-- Story 1: ImageNet -->
       <div class="story-card">
         <div class="story-image">
-          <!-- Make sure this image is named feifei.jpg in your folder -->
           <img src="feifei.jpg" alt="Fei-Fei Li">
         </div>
         <div class="story-copy">
@@ -279,10 +233,8 @@
         </div>
       </div>
 
-      <!-- Story 2: CharacterNet -->
       <div class="story-card">
         <div class="story-image">
-          <!-- Make sure this image is named abraham.jpg in your folder -->
           <img src="abraham.jpg" alt="Abraham Praise">
         </div>
         <div class="story-copy">
@@ -294,7 +246,6 @@
 
     </div>
 
-    <!-- The Proof Box -->
     <div class="proof-box">
       <p>I am a visual learner. I see and remember things in pictures, not in strokes. When I tried to learn Chinese the traditional way, I forgot what I learned before long. Strokes are meant for writing on paper. But puzzle pieces, like LEGO bricks, are for building images that stick in memory with zero memorization.</p>
       <p>Look at <strong>月</strong> (moon). I remember it because I see <strong>日</strong>, a window frame, through which I see the sun. And I see <strong>儿</strong>, a pair of legs of a child, upon which my window frame stands. So <strong>月</strong> is the moon I see through the window frame at night.</p>
@@ -302,14 +253,12 @@
       <p><em>Is it the official decomposition? Not always. A traditional scholar might say 月 is 冂 + 二. They are right. But I am not teaching etymology. I'm demonstrating practical recall with fun. After playing this way, I now recognize and rarely forget over 100 characters.</em></p>
     </div>
 
-    <!-- The Handover -->
     <div class="handover-box">
       <h2>Your Turn to Build.</h2>
       <p>Here, I hand over to you the entire 256 labeled alphabets of the Chinese language. Think of them as old wires and a battery. They are just raw components. But when you connect them with a story, you get light.</p>
       <p>You can now build any Chinese word with these pieces--with so much fun that you will not easily forget it. You don't need to be a scholar. You just need to be willing to play.</p>
     </div>
 
-    <!-- The Creator Card -->
     <div class="creator-card">
       <img src="abraham.jpg" alt="Abraham Praise" class="creator-image">
       <div class="creator-quote">
@@ -321,7 +270,6 @@
 
   </div>
 
-  <!-- FUNNEL -->
   <div class="funnel-section">
     <h2>READY TO ASSEMBLE?</h2>
     <p>CharacterNet gives you the flat-pack pieces. PRS Chinese is where you build and keep for refining your personally crafted hilarious stories fun.</p>
@@ -330,13 +278,11 @@
     </a>
   </div>
 
-  <!-- THE CLOSING STATEMENT -->
   <div class="closing-banner">
     ImageNet taught machines to see.<br>
     CharacterNet teaches them to read.
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer-bar">
     <div>© 2026 CHARACTERNET · CC BY 4.0</div>
     <div>
