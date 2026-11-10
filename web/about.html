@@ -68,6 +68,8 @@
   .story-card {
     flex: 1;
     border: 2px solid #111111;
+    display: flex;
+    flex-direction: column;
   }
 
   .story-image {
@@ -84,7 +86,7 @@
     filter: grayscale(100%) contrast(120%);
   }
 
-  .story-copy { padding: 25px; }
+  .story-copy { padding: 25px; flex-grow: 1; }
 
   .story-copy h2 {
     font-size: 18px;
@@ -104,6 +106,16 @@
     border: 2px solid #111111;
     padding: 30px;
     margin-bottom: 40px;
+  }
+  .proof-box h2 {
+    font-size: 20px; 
+    font-weight: 900; 
+    text-transform: uppercase; 
+    margin-top: 0; 
+    margin-bottom: 20px; 
+    border-bottom: 2px solid #111111; 
+    padding-bottom: 10px; 
+    display: inline-block;
   }
   .proof-box p { font-size: 16px; margin-bottom: 15px; color: #333; }
   .proof-box em { font-style: italic; color: #555; font-size: 15px; }
@@ -132,20 +144,53 @@
     filter: grayscale(100%) contrast(120%);
   }
   .creator-quote { flex: 1; }
-  .creator-quote h3 { font-size: 20px; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; }
+  .creator-quote h3 { font-size: 20px; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; margin-top: 0;}
   .creator-quote p { font-size: 16px; font-style: italic; color: #444; margin-bottom: 10px;}
   .creator-quote .ai-quote { font-size: 14px; color: #666; margin-top: 15px; border-top: 1px solid #ccc; padding-top: 15px; }
 
-  /* Funnel */
-  .funnel-section {
+  /* CTA Sections */
+  .cta-primary {
+    text-align: center; 
+    padding: 40px 20px 20px 20px; 
+    border-top: 2px solid #111111; 
+    margin-top: 40px;
+  }
+  .cta-primary h2 {
+    font-size: 24px; 
+    font-weight: 900; 
+    text-transform: uppercase; 
+    margin-bottom: 15px; 
+    letter-spacing: 1px;
+  }
+  .cta-primary p {
+    font-size: 16px; 
+    color: #666; 
+    margin-bottom: 25px; 
+    max-width: 500px; 
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  .btn-primary {
+    display: inline-block; 
+    padding: 18px 32px; 
+    font-size: 16px; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    text-decoration: none; 
+    background: #111111; 
+    color: #ffffff; 
+    border: 2px solid #111111;
+  }
+
+  .cta-secondary {
     border: 2px dashed #666;
-    margin: 0 40px 40px 40px;
+    margin: 40px;
     padding: 40px;
     text-align: center;
     background: #fafafa;
   }
-  .funnel-section h2 { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; }
-  .funnel-section p { font-size: 16px; color: #666; margin-bottom: 25px; }
+  .cta-secondary h2 { font-size: 20px; font-weight: 900; text-transform: uppercase; margin-bottom: 15px; margin-top: 0;}
+  .cta-secondary p { font-size: 16px; color: #666; margin-bottom: 25px; max-width: 500px; margin-left: auto; margin-right: auto; }
   .btn-accent {
     display: inline-block;
     padding: 18px 32px;
@@ -156,18 +201,6 @@
     background: #0058a3;
     color: #ffffff;
     border: 2px solid #111111;
-  }
-
-  /* Closing Banner */
-  .closing-banner {
-    background: #111111;
-    color: #ffffff;
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 22px;
-    font-weight: 900;
-    line-height: 1.4;
-    border-top: 2px solid #111111;
   }
 
   /* Footer */
@@ -193,7 +226,7 @@
   @media (max-width: 768px) {
     .nav-links a { margin-left: 0; margin-right: 15px; }
     .content-area { padding: 20px; }
-    .funnel-section { margin: 0 20px 20px 20px; }
+    .cta-secondary { margin: 20px; }
     .hero-statement { font-size: 22px; }
   }
 </style>
@@ -222,6 +255,7 @@
 
     <div class="parallel-grid">
       
+      <!-- Story 1: ImageNet -->
       <div class="story-card">
         <div class="story-image">
           <img src="feifei.jpeg" alt="Fei-Fei Li">
@@ -230,9 +264,11 @@
           <h2>1990s: Blind to the Image</h2>
           <p>Computers in the 1990s were completely blind to what was in a picture. They could only see random colored dots, not a dog, a car, or a smiling face.</p>
           <p>Then scientist <strong>Fei-Fei Li</strong> built <strong>ImageNet</strong>--a massive digital photo album of 14 million tagged pictures. By studying those photos, computers finally learned how to "see" the world.</p>
+          <p><strong>Now, AI can look at a photo and tell you a story about it.</strong> It can recognize the objects, the scene, and the context. It can finally see.</p>
         </div>
       </div>
 
+      <!-- Story 2: CharacterNet -->
       <div class="story-card">
         <div class="story-image">
           <img src="abraham.jpg" alt="Abraham Praise">
@@ -246,19 +282,23 @@
 
     </div>
 
+    <!-- The Proof Box -->
     <div class="proof-box">
+      <h2>The Engineer's Proof</h2>
       <p>I am a visual learner. I see and remember things in pictures, not in strokes. When I tried to learn Chinese the traditional way, I forgot what I learned before long. Strokes are meant for writing on paper. But puzzle pieces, like LEGO bricks, are for building images that stick in memory with zero memorization.</p>
       <p>Look at <strong>月</strong> (moon). I remember it because I see <strong>日</strong>, a window frame, through which I see the sun. And I see <strong>儿</strong>, a pair of legs of a child, upon which my window frame stands. So <strong>月</strong> is the moon I see through the window frame at night.</p>
       <p>Snap <strong>子</strong>, <strong>口</strong>, <strong>儿</strong> and <strong>丶</strong> together, and you have <strong>兔</strong> -- a rabbit. Or snap one long eyebrow <strong>一</strong> over two <strong>冂</strong> eyelids, and you get someone that is beautiful -- <strong>丽</strong>.</p>
       <p><em>Is it the official decomposition? Not always. A traditional scholar might say 月 is 冂 + 二. They are right. But I am not teaching etymology. I'm demonstrating practical recall with fun. After playing this way, I now recognize and rarely forget over 100 characters.</em></p>
     </div>
 
+    <!-- The Handover -->
     <div class="handover-box">
       <h2>Your Turn to Build.</h2>
       <p>Here, I hand over to you the entire 256 labeled alphabets of the Chinese language. Think of them as old wires and a battery. They are just raw components. But when you connect them with a story, you get light.</p>
       <p>You can now build any Chinese word with these pieces--with so much fun that you will not easily forget it. You don't need to be a scholar. You just need to be willing to play.</p>
     </div>
 
+    <!-- The Creator Card -->
     <div class="creator-card">
       <img src="abraham.jpg" alt="Abraham Praise" class="creator-image">
       <div class="creator-quote">
@@ -270,19 +310,25 @@
 
   </div>
 
-  <div class="funnel-section">
+  <!-- PRIMARY CTA: The Lookup Tool -->
+  <div class="cta-primary">
+    <h2>SEE THE PIECES FOR YOURSELF</h2>
+    <p>Type in a character and see the flat-pack visual atoms. It's completely free and open source.</p>
+    <a href="app.html" class="btn-primary">
+      TRY THE FREE LOOKUP TOOL →
+    </a>
+  </div>
+
+  <!-- SECONDARY CTA: PRS Funnel -->
+  <div class="cta-secondary">
     <h2>READY TO ASSEMBLE?</h2>
-    <p>CharacterNet gives you the flat-pack pieces. PRS Chinese is where you build and keep for refining your personally crafted hilarious stories fun.</p>
+    <p>CharacterNet gives you the flat-pack pieces. PRS Chinese is where you build and keep your personally crafted hilarious stories.</p>
     <a href="https://prschinese.sg" target="_blank" class="btn-accent">
       ASSEMBLE IN PRS CHINESE →
     </a>
   </div>
 
-  <div class="closing-banner">
-    ImageNet taught machines to see.<br>
-    CharacterNet teaches them to read.
-  </div>
-
+  <!-- FOOTER -->
   <footer class="footer-bar">
     <div>© 2026 CHARACTERNET · CC BY 4.0</div>
     <div>
