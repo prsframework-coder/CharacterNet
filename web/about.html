@@ -53,45 +53,120 @@
   .nav-links a:hover { color: var(--accent); border-color: var(--accent); }
 
   /* Main Content */
-  .content-area { padding: 60px 40px; }
+  .content-area { padding: 40px; }
   
-  .story-grid {
+  .hero-statement {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: var(--border);
+    text-align: center;
+  }
+
+  /* The Parallel Story Grid */
+  .parallel-grid {
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .story-card {
+    flex: 1;
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+  }
+
+  .story-image {
+    border-bottom: var(--border);
+    background: #fafafa;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .story-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    filter: grayscale(100%) contrast(120%);
+  }
+
+  .story-copy {
+    padding: 25px;
+  }
+
+  .story-copy h2 {
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: var(--accent);
+  }
+
+  .story-copy p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .story-copy strong { font-weight: 800; color: var(--ink); }
+
+  /* The Proof Box */
+  .proof-box {
+    background: #fafafa;
+    border: var(--border);
+    padding: 30px;
     margin-bottom: 40px;
   }
   
-  .story-text { flex: 1; }
-  .story-text h2 { font-size: 24px; font-weight: 900; text-transform: uppercase; margin-bottom: 20px; letter-spacing: -0.5px; }
-  .story-text p { font-size: 16px; margin-bottom: 20px; color: #333; }
-  .story-text strong { font-weight: 800; color: var(--ink); }
+  .proof-box p { font-size: 16px; margin-bottom: 15px; color: #333; }
+  .proof-box em { font-style: italic; color: #555; font-size: 15px; }
+
+  /* The Handover */
+  .handover-box {
+    margin-bottom: 40px;
+  }
+  .handover-box h2 {
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  .handover-box p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+  }
 
   /* The Creator Card */
   .creator-card {
     border: var(--border);
     padding: 30px;
     display: flex;
-    flex-direction: column; /* Stack vertically by default for mobile */
+    flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 20px;
-    margin-top: 40px;
-    background: #fafafa;
+    background: var(--white);
   }
   
-  /* The Black & White Image */
   .creator-image {
     width: 140px;
     height: 140px;
     border: var(--border);
     background: var(--white);
     object-fit: cover;
-    flex-shrink: 0;
+    filter: grayscale(100%) contrast(120%);
   }
   
   .creator-quote { flex: 1; }
   .creator-quote h3 { font-size: 20px; font-weight: 900; text-transform: uppercase; margin-bottom: 10px; }
-  .creator-quote p { font-size: 16px; font-style: italic; color: #444; }
+  .creator-quote p { font-size: 16px; font-style: italic; color: #444; margin-bottom: 10px;}
+  .creator-quote .ai-quote { font-size: 14px; color: #666; margin-top: 15px; border-top: 1px solid #ccc; padding-top: 15px; }
 
   /* Funnel */
   .funnel-section {
@@ -116,6 +191,18 @@
   }
   .btn-accent:hover { background: #004080; }
 
+  /* The Final Closing Banner */
+  .closing-banner {
+    background: var(--ink);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.4;
+    border-top: var(--border);
+  }
+
   /* Footer */
   .footer-bar {
     border-top: var(--border);
@@ -126,22 +213,29 @@
     font-weight: 700;
     text-transform: uppercase;
     color: #666;
+    background: var(--white);
   }
   .footer-bar a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .story-grid { flex-direction: column; }
-    .nav-links a { margin-left: 0; margin-right: 15px; }
-  }
-  
-  /* Desktop layout for the creator card */
-  @media (min-width: 769px) {
+  /* Desktop Layout Adjustments */
+  @media (min-width: 800px) {
+    .parallel-grid {
+      flex-direction: row;
+    }
+    .story-card {
+      /* Cards sit side by side */
+    }
     .creator-card {
-      flex-direction: row; /* Side-by-side on desktop */
+      flex-direction: row;
       text-align: left;
       align-items: flex-start;
     }
+  }
+  @media (max-width: 768px) {
+    .nav-links a { margin-left: 0; margin-right: 15px; }
+    .content-area { padding: 20px; }
+    .funnel-section { margin: 0 20px 20px 20px; }
+    .hero-statement { font-size: 22px; }
   }
 </style>
 </head>
@@ -161,59 +255,85 @@
     </div>
   </header>
 
-  <!-- MAIN STORY CONTENT -->
+  <!-- MAIN CONTENT -->
   <div class="content-area">
-    <div class="story-grid">
+    
+    <div class="hero-statement">
+      Strokes build Chinese characters on paper.<br>
+      Bricks build the image in memory.
+    </div>
+
+    <!-- The Parallel Stories (Side by Side on Desktop) -->
+    <div class="parallel-grid">
       
-      <!-- Left Side: The AI Story -->
-      <div class="story-text">
-        <h2>Once upon a time, AI was blind.</h2>
-        <p>It could read entire libraries, but a picture of a cat was just a grid of numbers. Then, a scientist named Fei-Fei Li built <strong>ImageNet</strong>--a treasure map of millions of pictures. Suddenly, AI opened its eyes and could see the world.</p>
-        
-        <p>Years passed, and AI became super smart. But one day, a 59-year-old man sat down to learn Chinese. He looked at a character and asked DeepSeek AI, <em>"How do I remember this?"</em></p>
-        
-        <p>AI replied with the proven methods: <em>"Write it many times over and over again. Memorize the radicals by associating them with images. Use spaced repetition drills etc."</em></p>
-        
-        <p>The man blinked. Those methods were built for the classroom, but they didn't fit his brain. <strong>Once again, AI was blind.</strong> Not to images this time--but to the visual puzzle of the Chinese character right in front of its eyes. It knew the dictionary, but it couldn't see the window frame or the legs of the 月 Chinese character.</p>
-        
-        <p>So the man said to DeepSeek, <em>"My learning style is different. It is very visual. It is very childish."</em> And he set out to build a new way for AI to see.</p>
+      <!-- Story 1: ImageNet -->
+      <div class="story-card">
+        <div class="story-image">
+          <!-- Make sure this image is named feifei.jpg in your folder -->
+          <img src="feifei.jpg" alt="Fei-Fei Li">
+        </div>
+        <div class="story-copy">
+          <h2>1990s: Blind to the Image</h2>
+          <p>Computers in the 1990s were completely blind to what was in a picture. They could only see random colored dots, not a dog, a car, or a smiling face.</p>
+          <p>Then scientist <strong>Fei-Fei Li</strong> built <strong>ImageNet</strong>--a massive digital photo album of 14 million tagged pictures. By studying those photos, computers finally learned how to "see" the world.</p>
+        </div>
       </div>
 
-      <!-- Right Side: The Solution & Creator -->
-      <div class="story-text">
-        <h2>Enter CharacterNet.</h2>
-        <p>Four months later, that man--Abraham Praise--had built the PRS Engine, launched the commercial platform, and created CharacterNet: a freely available visual dataset of 256 foundational building blocks of Chinese writing.
-
-CharacterNet is shared under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence. You are free to use, share and adapt the material, provided you give appropriate credit.</p>
-        
-        <p>We didn't map the ancient etymology. We mapped the visual shapes. The bricks of the language.</p>
-
-        <!-- THE IKEA CREATOR CARD -->
-        <div class="creator-card">
-          <img src="abraham.jpg" alt="Abraham Praise" class="creator-image">
-          <div class="creator-quote">
-            <h3>Designed by Abraham.</h3>
-            <p>"I built this for visual learners like me. When I look at a Chinese character, I don’t just see strokes. I see Lego pieces! Look at these two Chinese characters, 凸 and 凹. Don’t they look like little Lego building blocks, just waiting to be snapped together?
-
-That’s the thinking behind CharacterNet -- the atomic periodic table of Chinese characters. It brings together 256 visual building blocks, and the pieces are all yours, free of charge!
-
-Pick them up, mix them around, snap them together and have fun building your own hilarious, sticky stories. Let your imagination run wild. Who knows what you’ll create?
-
-You are the pilot. I just built the airspace."</p>
-          </div>
+      <!-- Story 2: CharacterNet -->
+      <div class="story-card">
+        <div class="story-image">
+          <!-- Make sure this image is named abraham.jpg in your folder -->
+          <img src="abraham.jpg" alt="Abraham Praise">
+        </div>
+        <div class="story-copy">
+          <h2>2020s: Blind to the Character</h2>
+          <p>AI in the 2020s could read entire libraries, but it was blind to the visual puzzle of a Chinese character. It could read a dictionary definition, but it couldn't see the little images the eye sees.</p>
+          <p>So, a 59-year-old broadcast engineer named <strong>Abraham Praise</strong> built <strong>CharacterNet</strong>--a big Lego box of China’s official 256 foundational characters. He tagged each one as a small visual brick, so that we can finally see Chinese characters visually.</p>
         </div>
       </div>
 
     </div>
+
+    <!-- The Proof Box -->
+    <div class="proof-box">
+      <p>I am a visual learner. I see and remember things in pictures, not in strokes. When I tried to learn Chinese the traditional way, I forgot what I learned before long. Strokes are meant for writing on paper. But puzzle pieces, like LEGO bricks, are for building images that stick in memory with zero memorization.</p>
+      <p>Look at <strong>月</strong> (moon). I remember it because I see <strong>日</strong>, a window frame, through which I see the sun. And I see <strong>儿</strong>, a pair of legs of a child, upon which my window frame stands. So <strong>月</strong> is the moon I see through the window frame at night.</p>
+      <p>Snap <strong>子</strong>, <strong>口</strong>, <strong>儿</strong> and <strong>丶</strong> together, and you have <strong>兔</strong> -- a rabbit. Or snap one long eyebrow <strong>一</strong> over two <strong>冂</strong> eyelids, and you get someone that is beautiful -- <strong>丽</strong>.</p>
+      <p><em>Is it the official decomposition? Not always. A traditional scholar might say 月 is 冂 + 二. They are right. But I am not teaching etymology. I'm demonstrating practical recall with fun. After playing this way, I now recognize and rarely forget over 100 characters.</em></p>
+    </div>
+
+    <!-- The Handover -->
+    <div class="handover-box">
+      <h2>Your Turn to Build.</h2>
+      <p>Here, I hand over to you the entire 256 labeled alphabets of the Chinese language. Think of them as old wires and a battery. They are just raw components. But when you connect them with a story, you get light.</p>
+      <p>You can now build any Chinese word with these pieces--with so much fun that you will not easily forget it. You don't need to be a scholar. You just need to be willing to play.</p>
+    </div>
+
+    <!-- The Creator Card -->
+    <div class="creator-card">
+      <img src="abraham.jpg" alt="Abraham Praise" class="creator-image">
+      <div class="creator-quote">
+        <h3>Designed by Abraham.</h3>
+        <p>"I built this for visual learners like me. The pieces are free. The stories are where the craft lives. You are the pilot. I just built the airspace."</p>
+        <p class="ai-quote">"That's not a workaround to the method. That is the method." -- DeepSeek AI</p>
+      </div>
+    </div>
+
   </div>
 
   <!-- FUNNEL -->
   <div class="funnel-section">
     <h2>READY TO ASSEMBLE?</h2>
-    <p>Grab the visual pieces together with the pinyin, tone and meaning of a chinese character and proceed to</p>
+    <p>CharacterNet gives you the flat-pack pieces. PRS Chinese is where you build and keep for refining your personally crafted hilarious stories fun.</p>
     <a href="https://prschinese.sg" target="_blank" class="btn-accent">
       ASSEMBLE IN PRS CHINESE →
     </a>
+  </div>
+
+  <!-- THE CLOSING STATEMENT -->
+  <div class="closing-banner">
+    ImageNet taught machines to see.<br>
+    CharacterNet teaches them to read.
   </div>
 
   <!-- FOOTER -->
