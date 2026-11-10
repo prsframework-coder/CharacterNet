@@ -7,7 +7,7 @@ Learn the table, unlock the language.
  
 An open-source visual decomposition dataset for Chinese character learning, powered by the PRS™ Framework.
  
-CharacterNet v2.0 is built on the official Ministry of Education (MoE) 2009 Standard for Modern Commonly Used Independent Characters (the 256 "atoms" of Chinese). It provides the raw, perceptual materials for understanding Chinese characters: the visual components the human eye actually sees, phonetic mapping, tonal structure, and semantic constraints.
+CharacterNet v2.0 is built on China’s Ministry of Education (MoE) 2009 Standard for Modern Commonly Used Independent Characters (the 256 “atoms” of Chinese characters, which can be referred to as the alphabet of the Chinese language). It provides the raw perceptual materials for understanding Chinese characters: the visual components the human eye actually sees, phonetic mapping, tonal structure, and semantic constraints.
  
 It does not include finished mnemonic stories or pedagogical sequences. 
  
