@@ -1,7 +1,7 @@
 {
   "characternet": {
     "version": "2.0",
-    "last_updated": "2026-11-07",
+    "last_updated": "2026-11-13",
     "framework": "PRS -- Picture, Retrieve, Story",
     "architecture": "The Periodic Table of 256 Atomic Visual Components. Maps the human perceptual eye to the structural building blocks of Chinese characters.",
     "characters": [
@@ -842,7 +842,7 @@
         "is_moe_atom": true,
         "visual_pieces": ["子", "口", "儿"],
         "component_meanings": {
-          "⺈": "a child",
+          "子": "a child",
           "口": "the opening",
           "儿": "meandering legs"
         },
@@ -861,6 +861,150 @@
           "meaning_as_payoff": true
         },
         "tags": ["action", "hs2"],
+        "family": "abstract"
+      },
+      {
+        "id": "ATOM-0031",
+        "character": "干",
+        "pinyin": "gān",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "dry / to do",
+        "is_moe_atom": true,
+        "visual_pieces": ["一", "十"],
+        "component_meanings": { "一": "one crossbar", "十": "a gangway cross" },
+        "component_pinyin": { "一": "yī", "十": "shí" },
+        "binding_constraint": "Bind the visual pieces (one crossbar, a gangway cross) with the sound 'gān' (gangway) and the 1st flat tone into a scene that means 'dry / to do' -- one gangway to cross on a dry day is the work I have to do.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["action", "nature", "hs1"],
+        "family": "actions"
+      },
+      {
+        "id": "ATOM-0032",
+        "character": "工",
+        "pinyin": "gōng",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "work / labor",
+        "is_moe_atom": true,
+        "visual_pieces": ["工"],
+        "component_meanings": { "工": "a heavy-duty iron dumbbell / gong" },
+        "component_pinyin": { "工": "gōng" },
+        "binding_constraint": "Bind the visual piece (a heavy-duty iron dumbbell) with the sound 'gōng' (gong) and the 1st flat tone into a scene that means 'work / labor' -- straight heavy-duty iron gongs are labor-intensive workout tools.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["action", "object", "hs1"],
+        "family": "actions"
+      },
+      {
+        "id": "ATOM-0033",
+        "character": "弓",
+        "pinyin": "gōng",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "bow / weapon",
+        "is_moe_atom": true,
+        "visual_pieces": ["弓"],
+        "component_meanings": { "弓": "a backward-S shaped snake / curved bow" },
+        "component_pinyin": { "弓": "gōng" },
+        "binding_constraint": "Bind the visual piece (a backward-S shaped snake) with the sound 'gōng' and the 1st flat tone into a scene that means 'bow / weapon' -- a backward-S shaped snake going straight ahead is a dangerous bow weapon.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["object", "weapon", "hs2"],
+        "family": "objects"
+      },
+      {
+        "id": "ATOM-0034",
+        "character": "己",
+        "pinyin": "jǐ",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "self",
+        "is_moe_atom": true,
+        "visual_pieces": ["己"],
+        "component_meanings": { "己": "a backward-S shaped snake" },
+        "component_pinyin": { "己": "jǐ" },
+        "binding_constraint": "Bind the visual piece (a backward-S shaped snake) with the sound 'jǐ' (Gee!) and the 3rd dip-rise tone into a scene that means 'self' -- a backward-S shaped snake! Gee! It's all by itself.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["abstract", "pronoun", "hs1"],
+        "family": "pronouns"
+      },
+      {
+        "id": "ATOM-0035",
+        "character": "巾",
+        "pinyin": "jīn",
+        "tone": 1,
+        "tone_contour": "flat (ˉ)",
+        "meaning": "towel / cloth",
+        "is_moe_atom": true,
+        "visual_pieces": ["巾"],
+        "component_meanings": { "巾": "a cross-bar cloth hanger with two hanging sides" },
+        "component_pinyin": { "巾": "jīn" },
+        "binding_constraint": "Bind the visual piece (a cross-bar cloth hanger) with the sound 'jīn' (jeans) and the 1st flat tone into a scene that means 'towel / cloth' -- a cross-bar cloth hanger holding two jeans towels across both sides.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["object", "clothing", "hs2"],
+        "family": "objects"
+      },
+      {
+        "id": "ATOM-0036",
+        "character": "广",
+        "pinyin": "guǎng",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "broad / wide",
+        "is_moe_atom": true,
+        "visual_pieces": ["厂", "丶"],
+        "component_meanings": { "厂": "the factory tool", "丶": "the adjustable gauge knob" },
+        "component_pinyin": { "厂": "chǎng", "丶": "diǎn" },
+        "binding_constraint": "Bind the visual pieces (a factory tool, an adjustable gauge knob) with the sound 'guǎng' (gauge) and the 3rd dip-rise tone into a scene that means 'broad / wide' -- a factory tool with a wide-range adjustable gauge knob.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["size", "shape", "hs2"],
+        "family": "shapes"
+      },
+      {
+        "id": "ATOM-0037",
+        "character": "子",
+        "pinyin": "zǐ",
+        "tone": 3,
+        "tone_contour": "dip-rise (ˇ)",
+        "meaning": "child / son",
+        "is_moe_atom": true,
+        "visual_pieces": ["一", "了"],
+        "component_meanings": { "一": "arms wide apart", "了": "zipping along" },
+        "component_pinyin": { "一": "yī", "了": "le" },
+        "binding_constraint": "Bind the visual pieces (arms wide apart, zipping along) with the sound 'zǐ' (zipping) and the 3rd dip-rise tone into a scene that means 'child / son' -- one (一) zipping along (了) with arms wide apart, that's a child.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["family", "person", "hs1"],
+        "family": "family"
+      },
+      {
+        "id": "ATOM-0038",
+        "character": "了",
+        "pinyin": "le",
+        "tone": 0,
+        "tone_contour": "neutral",
+        "meaning": "completed / already",
+        "is_moe_atom": false,
+        "visual_pieces": ["了"],
+        "component_meanings": { "了": "a zipping snake / a swift hook" },
+        "component_pinyin": { "了": "le" },
+        "binding_constraint": "Bind the visual piece (a zipping snake) with the neutral tone sound 'le' into a scene that means 'completed / already' -- a swift hook that zips the action away, meaning it is already done.",
+        "connections": {
+          "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+        },
+        "tags": ["grammar", "particle", "hs1"],
         "family": "abstract"
       }
     ]
