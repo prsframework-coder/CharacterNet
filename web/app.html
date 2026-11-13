@@ -91,7 +91,7 @@
     <button onclick="lookup()">Find</button>
   </div>
 
-  <div class="error hidden" id="errorMsg">Article not found in CharacterNet database.</div>
+  <div class="error hidden" id="errorMsg">Character not found in CharacterNet database.</div>
 
   <div id="resultArea" class="hidden">
     
@@ -157,7 +157,7 @@ const ATOMS_DATA = [
   { "character": "一", "pinyin": "yī", "tone": 1, "meaning": "one", "visual_pieces": ["一"], "component_pinyin": {"一": "yī"}, "component_meanings": {"一": "line"} },
   { "character": "二", "pinyin": "èr", "tone": 4, "meaning": "two", "visual_pieces": ["二"], "component_pinyin": {"二": "èr"}, "component_meanings": {"二": "two lines"} },
   { "character": "三", "pinyin": "sān", "tone": 1, "meaning": "three", "visual_pieces": ["三"], "component_pinyin": {"三": "sān"}, "component_meanings": {"三": "three lines"} },
-  { "character": "四", "pinyin": "sì", "tone": 4, "meaning": "four", "visual_pieces": ["口", "儿"], "component_pinyin": {"口": "kǒu", "儿": "ér"}, "component_meanings": {"口": "opening", "儿": "legs"} },
+  { "character": "四", "pinyin": "sì", "tone": 4, "meaning": "four", "visual_pieces": ["囗", "儿"], "component_pinyin": {"囗": "wéi", "儿": "ér"}, "component_meanings": {"囗": "opening/pen", "儿": "legs"} },
   { "character": "五", "pinyin": "wǔ", "tone": 3, "meaning": "five", "visual_pieces": ["一", "／", "｜"], "component_pinyin": {"一": "yī", "／": "slash", "｜": "gǔn"}, "component_meanings": {"一": "top bar", "／": "angle", "｜": "vertical"} },
   { "character": "六", "pinyin": "liù", "tone": 4, "meaning": "six", "visual_pieces": ["亠", "八"], "component_pinyin": {"亠": "tóu", "八": "bā"}, "component_meanings": {"亠": "lid", "八": "legs"} },
   { "character": "九", "pinyin": "jiǔ", "tone": 3, "meaning": "nine", "visual_pieces": ["丿", "一", "乚"], "component_pinyin": {"丿": "piě", "一": "yī", "乚": "yǐn"}, "component_meanings": {"丿": "leg", "一": "line", "乚": "tail"} },
@@ -165,7 +165,15 @@ const ATOMS_DATA = [
   { "character": "儿", "pinyin": "ér", "tone": 2, "meaning": "child", "visual_pieces": ["儿"], "component_pinyin": {"儿": "ér"}, "component_meanings": {"儿": "legs"} },
   { "character": "木", "pinyin": "mù", "tone": 4, "meaning": "tree", "visual_pieces": ["十", "八"], "component_pinyin": {"十": "shí", "八": "bā"}, "component_meanings": {"十": "cross", "八": "legs"} },
   { "character": "兔", "pinyin": "tù", "tone": 4, "meaning": "rabbit", "visual_pieces": ["子", "口", "儿", "丶"], "component_pinyin": {"子": "zǐ", "口": "kǒu", "儿": "ér", "丶": "diǎn"}, "component_meanings": {"子": "child", "口": "opening", "儿": "legs", "丶": "dot"} },
-  { "character": "免", "pinyin": "miǎn", "tone": 3, "meaning": "to avoid", "visual_pieces": ["子", "口", "儿"], "component_pinyin": {"子": "zǐ", "口": "kǒu", "儿": "ér"}, "component_meanings": {"子": "child", "口": "opening", "儿": "legs"} }
+  { "character": "免", "pinyin": "miǎn", "tone": 3, "meaning": "to avoid", "visual_pieces": ["子", "口", "儿"], "component_pinyin": {"子": "zǐ", "口": "kǒu", "儿": "ér"}, "component_meanings": {"子": "child", "口": "opening", "儿": "legs"} },
+  { "character": "干", "pinyin": "gān", "tone": 1, "meaning": "dry / to do", "visual_pieces": ["一", "十"], "component_pinyin": {"一": "yī", "十": "shí"}, "component_meanings": {"一": "one crossbar", "十": "gangway cross"} },
+  { "character": "工", "pinyin": "gōng", "tone": 1, "meaning": "work / labor", "visual_pieces": ["工"], "component_pinyin": {"工": "gōng"}, "component_meanings": {"工": "dumbbell / gong"} },
+  { "character": "弓", "pinyin": "gōng", "tone": 1, "meaning": "bow / weapon", "visual_pieces": ["弓"], "component_pinyin": {"弓": "gōng"}, "component_meanings": {"弓": "backward-S snake"} },
+  { "character": "己", "pinyin": "jǐ", "tone": 3, "meaning": "self", "visual_pieces": ["己"], "component_pinyin": {"己": "jǐ"}, "component_meanings": {"己": "backward-S snake"} },
+  { "character": "巾", "pinyin": "jīn", "tone": 1, "meaning": "towel / cloth", "visual_pieces": ["巾"], "component_pinyin": {"巾": "jīn"}, "component_meanings": {"巾": "cloth hanger"} },
+  { "character": "广", "pinyin": "guǎng", "tone": 3, "meaning": "broad / wide", "visual_pieces": ["厂", "丶"], "component_pinyin": {"厂": "chǎng", "丶": "diǎn"}, "component_meanings": {"厂": "factory tool", "丶": "adjustable gauge knob"} },
+  { "character": "子", "pinyin": "zǐ", "tone": 3, "meaning": "child / son", "visual_pieces": ["一", "了"], "component_pinyin": {"一": "yī", "了": "le"}, "component_meanings": {"一": "arms wide apart", "了": "zipping along"} },
+  { "character": "了", "pinyin": "le", "tone": 0, "meaning": "completed / already", "visual_pieces": ["了"], "component_pinyin": {"了": "le"}, "component_meanings": {"了": "zipping snake"} }
 ];
 
 let ATOMS = {}; 
@@ -238,7 +246,10 @@ function lookup() {
 
   document.getElementById('resChar').textContent = displayData.character;
   document.getElementById('resMeaning').textContent = displayData.meaning;
-  document.getElementById('resPinyin').textContent = `${displayData.pinyin} · Tone ${displayData.tone}`;
+  
+  // Handle the neutral tone display for 了
+  let toneDisplay = displayData.tone === 0 ? "Neutral" : `Tone ${displayData.tone}`;
+  document.getElementById('resPinyin').textContent = `${displayData.pinyin} · ${toneDisplay}`;
 
   const tbody = document.getElementById('resTableBody');
   tbody.innerHTML = ''; 
