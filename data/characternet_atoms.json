@@ -1384,6 +1384,132 @@
       },
       "tags": ["nature", "colours", "hs2"],
       "family": "nature"
+    },
+    {
+      "id": "ATOM-0060",
+      "character": "甘",
+      "pinyin": "gān",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "sweet",
+      "is_moe_atom": true,
+      "visual_pieces": ["日", "一"],
+      "component_meanings": { "日": "the sun", "一": "both hands raised" },
+      "component_pinyin": { "日": "rì", "一": "yī" },
+      "binding_constraint": "Bind the visual pieces (the sun, both hands raised) with the sound 'gān' (gains) and the 1st flat tone into a scene that means 'sweet' -- the sun with both hands raised is sweet gains (gān) for all.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["taste", "abstract", "hs1"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0061",
+      "character": "石",
+      "pinyin": "shí",
+      "tone": 2,
+      "tone_contour": "rising (')",
+      "meaning": "stone / rock",
+      "is_moe_atom": true,
+      "visual_pieces": ["厂", "口"],
+      "component_meanings": { "厂": "a factory tool", "口": "an open mouth" },
+      "component_pinyin": { "厂": "chǎng", "口": "kǒu" },
+      "binding_constraint": "Bind the visual pieces (a factory tool, an open mouth) with the sound 'shí' (Shi) and the 2nd rising tone into a scene that means 'stone / rock' -- what is that factory tool (厂) doing over that opening (口)? Shi (shí), keep your mouth (口) shut stone (石) face, this is a stick up!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["nature", "object", "hs1"],
+      "family": "nature"
+    },
+    {
+      "id": "ATOM-0062",
+      "character": "右",
+      "pinyin": "yòu",
+      "tone": 4,
+      "tone_contour": "falling (ˋ)",
+      "meaning": "right",
+      "is_moe_atom": true,
+      "visual_pieces": ["𠂇", "口"],
+      "component_meanings": { "𠂇": "a long right arm pointing a finger", "口": "an opening" },
+      "component_pinyin": { "𠂇": "yòu", "口": "kǒu" },
+      "binding_constraint": "Bind the visual pieces (a long right arm pointing a finger, an opening) with the sound 'yòu' (you) and the 4th falling tone into a scene that means 'right' -- what is that long right arm (𠂇) doing over that opening (口)? Pointing a finger right down at YOU (yòu)!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["direction", "body", "hs1"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0063",
+      "character": "左",
+      "pinyin": "zuǒ",
+      "tone": 3,
+      "tone_contour": "dip-rise (ˇ)",
+      "meaning": "left",
+      "is_moe_atom": true,
+      "visual_pieces": ["𠂇", "工"],
+      "component_meanings": { "𠂇": "a long right arm", "工": "a dumbbell" },
+      "component_pinyin": { "𠂇": "yòu", "工": "gōng" },
+      "binding_constraint": "Bind the visual pieces (a long right arm, a dumbbell) with the sound 'zuǒ' and the 3rd dip-rise tone into a scene that means 'left' -- what is that long right arm (𠂇) doing over that dumbbell (工)? Left zoned out (zuǒ)!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["direction", "body", "hs1"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0064",
+      "character": "出",
+      "pinyin": "chū",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "to go out",
+      "is_moe_atom": true,
+      "visual_pieces": ["山", "山"],
+      "component_meanings": { "山": "a mountain" },
+      "component_pinyin": { "山": "shān" },
+      "binding_constraint": "Bind the visual pieces (a mountain, another mountain) with the sound 'chū' (Chu Chu) and the 1st flat tone into a scene that means 'to go out' -- a mountain (山) over another mountain (山)? That’s a smoking Chu Chu (chū) train about to explode--let's go out of here quickly!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["action", "nature", "hs1"],
+      "family": "actions"
+    },
+    {
+      "id": "ATOM-0065",
+      "character": "正",
+      "pinyin": "zhèng",
+      "tone": 4,
+      "tone_contour": "falling (ˋ)",
+      "meaning": "correct / upright",
+      "is_moe_atom": true,
+      "visual_pieces": ["一", "丨", "工"],
+      "component_meanings": { "一": "the top bar", "丨": "one engineered vertical line", "工": "the dumbbell base" },
+      "component_pinyin": { "一": "yī", "丨": "gǔn", "工": "gōng" },
+      "binding_constraint": "Bind the visual pieces (a top bar, a vertical line, a dumbbell base) with the sound 'zhèng' (Schengen) and the 4th falling tone into a scene that means 'correct / upright' -- one (丨) dumbbell (工) engineered (E) down by Schengen (zhèng!) stands upright and correct!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["abstract", "shape", "hs1"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0066",
+      "character": "世",
+      "pinyin": "shì",
+      "tone": 4,
+      "tone_contour": "falling (ˋ)",
+      "meaning": "generation / world",
+      "is_moe_atom": true,
+      "visual_pieces": ["廿", "L"],
+      "component_meanings": { "廿": "twenties (two tens)", "L": "leaders" },
+      "component_pinyin": { "廿": "niàn", "L": "ell" },
+      "binding_constraint": "Bind the visual pieces (twenties, leaders) with the sound 'shì' (shield) and the 4th falling tone into a scene that means 'generation / world' -- Leaders (L) of the twenties (廿, 十 十) generation of world defence shield (shì)!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["time", "society", "hs2"],
+      "family": "abstract"
     }
     ]
   }
