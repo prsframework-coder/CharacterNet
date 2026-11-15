@@ -1132,6 +1132,132 @@
       },
       "tags": ["grammar", "abstract", "hs1"],
       "family": "abstract"
+    },
+    {
+      "id": "ATOM-0046",
+      "character": "天",
+      "pinyin": "tiān",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "sky / heaven",
+      "is_moe_atom": true,
+      "visual_pieces": ["一", "大"],
+      "component_meanings": { "一": "head wings", "大": "a big person" },
+      "component_pinyin": { "一": "yī", "大": "dà" },
+      "binding_constraint": "Bind the visual pieces (head wings, a big person) with the sound 'tiān' (tea nuts) and the 1st flat tone into a scene that means 'sky / heaven' -- a big person with head wings flying Tea nuts (tiān) across the sky of heaven.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["nature", "abstract", "hs1"],
+      "family": "nature"
+    },
+    {
+      "id": "ATOM-0047",
+      "character": "夫",
+      "pinyin": "fū",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "husband / man",
+      "is_moe_atom": true,
+      "visual_pieces": ["一", "大"],
+      "component_meanings": { "一": "the fuselage", "大": "a big person" },
+      "component_pinyin": { "一": "yī", "大": "dà" },
+      "binding_constraint": "Bind the visual pieces (the fuselage, a big person) with the sound 'fū' (fuselage) and the 1st flat tone into a scene that means 'husband / man' -- a big person poking straight out his head above the fuselage (fū) flying wings is a husband man.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["person", "family", "hs1"],
+      "family": "family"
+    },
+    {
+      "id": "ATOM-0048",
+      "character": "太",
+      "pinyin": "tài",
+      "tone": 4,
+      "tone_contour": "falling (ˋ)",
+      "meaning": "too / very",
+      "is_moe_atom": true,
+      "visual_pieces": ["大", "丶"],
+      "component_meanings": { "大": "a big person", "丶": "the taichi dot / a balancing point" },
+      "component_pinyin": { "大": "dà", "丶": "diǎn" },
+      "binding_constraint": "Bind the visual pieces (a big person, a dot) with the sound 'tài' (taichi) and the 4th falling tone into a scene that means 'too / very' -- who is this big person? A very good taichi (tài) player too.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["abstract", "size", "hs1"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0049",
+      "character": "少",
+      "pinyin": "shǎo",
+      "tone": 3,
+      "tone_contour": "dip-rise (ˇ)",
+      "meaning": "few / little",
+      "is_moe_atom": true,
+      "visual_pieces": ["小", "丿"],
+      "component_meanings": { "小": "a small figure", "丿": "a surfer's board / swipe" },
+      "component_pinyin": { "小": "xiǎo", "丿": "piě" },
+      "binding_constraint": "Bind the visual pieces (a small figure, a surfer's board) with the sound 'shǎo' (shallow) and the 3rd dip-rise tone into a scene that means 'few / little' -- a small (小) surfer (丿) riding on shallow (shǎo) waters a few times.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["quantity", "size", "hs1"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0050",
+      "character": "小",
+      "pinyin": "xiǎo",
+      "tone": 3,
+      "tone_contour": "dip-rise (ˇ)",
+      "meaning": "small / little",
+      "is_moe_atom": true,
+      "visual_pieces": ["亅", "八"],
+      "component_meanings": { "亅": "the little creature body", "八": "two dangling arms" },
+      "component_pinyin": { "亅": "jué", "八": "bā" },
+      "binding_constraint": "Bind the visual pieces (a little creature body, two dangling arms) with the sound 'xiǎo' (see aww) and the 3rd dip-rise tone into a scene that means 'small / little' -- look at that little (亅) creature with two dangling arms (八) - see aww (xiǎo) so small and cute.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["size", "hs1"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0051",
+      "character": "川",
+      "pinyin": "chuān",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "river / stream",
+      "is_moe_atom": true,
+      "visual_pieces": ["川"],
+      "component_meanings": { "川": "three flowing river lines" },
+      "component_pinyin": { "川": "chuān" },
+      "binding_constraint": "Bind the visual piece (three flowing river lines) with the sound 'chuān' (Sichuan) and the 1st flat tone into a scene that means 'river / stream' -- the three river lines of Sichuan (chuān) province.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["nature", "geography", "hs1"],
+      "family": "nature"
+    },
+    {
+      "id": "ATOM-0052",
+      "character": "王",
+      "pinyin": "wáng",
+      "tone": 2,
+      "tone_contour": "rising (')",
+      "meaning": "king",
+      "is_moe_atom": true,
+      "visual_pieces": ["王"],
+      "component_meanings": { "王": "a cross between two lines (heaven above, earth below)" },
+      "component_pinyin": { "王": "wáng" },
+      "binding_constraint": "Bind the visual piece (a cross between two lines) with the sound 'wáng' (Wang) and the 2nd rising tone into a scene that means 'king' -- a cross between two lines belongs to King Wang of China.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["person", "society", "hs1"],
+      "family": "people"
     }
     ]
   }
