@@ -1249,10 +1249,10 @@
       "tone_contour": "rising (')",
       "meaning": "king",
       "is_moe_atom": true,
-      "visual_pieces": ["王"],
-      "component_meanings": { "王": "a cross between two lines (heaven above, earth below)" },
-      "component_pinyin": { "王": "wáng" },
-      "binding_constraint": "Bind the visual piece (a cross between two lines) with the sound 'wáng' (Wang) and the 2nd rising tone into a scene that means 'king' -- a cross between two lines belongs to King Wang of China.",
+      "visual_pieces": ["一", "十", "一"],
+      "component_meanings": { "一": "a top line", "十": "a cross", "一": "a bottom line" },
+      "component_pinyin": { "一": "yī", "十": "shí" },
+      "binding_constraint": "Bind the visual pieces (a top line, a cross, a bottom line) with the sound 'wáng' (Wang) and the 2nd rising tone into a scene that means 'king' -- a cross (十) between two lines (一 and 一) belongs to King Wang of China.",
       "connections": {
         "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
       },
