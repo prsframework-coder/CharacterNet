@@ -1006,7 +1006,133 @@
         },
         "tags": ["grammar", "particle", "hs1"],
         "family": "abstract"
-      }
+      },
+      {
+      "id": "ATOM-0039",
+      "character": "久",
+      "pinyin": "jiǔ",
+      "tone": 3,
+      "tone_contour": "dip-rise (ˇ)",
+      "meaning": "long time",
+      "is_moe_atom": true,
+      "visual_pieces": ["人", "一"],
+      "component_meanings": { "人": "a person", "一": "one line (a long road)" },
+      "component_pinyin": { "人": "rén", "一": "yī" },
+      "binding_constraint": "Bind the visual pieces (a person, one line) with the sound 'jiǔ' (joker) and the 3rd dip-rise tone into a scene that means 'long time' -- this person (人) is one (一) joker (jiǔ) waiting for a long time.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["time", "abstract", "hs1"],
+      "family": "time"
+    },
+    {
+      "id": "ATOM-0040",
+      "character": "女",
+      "pinyin": "nǚ",
+      "tone": 3,
+      "tone_contour": "dip-rise (ˇ)",
+      "meaning": "woman",
+      "is_moe_atom": true,
+      "visual_pieces": ["女"],
+      "component_meanings": { "女": "a figure with crossed legs" },
+      "component_pinyin": { "女": "nǚ" },
+      "binding_constraint": "Bind the visual piece (a figure with crossed legs) with the sound 'nǚ' (new) and the 3rd dip-rise tone into a scene that means 'woman' -- a crossed legs one must be a new (nǚ) woman.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["person", "family", "hs1"],
+      "family": "family"
+    },
+    {
+      "id": "ATOM-0041",
+      "character": "山",
+      "pinyin": "shān",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "mountain",
+      "is_moe_atom": true,
+      "visual_pieces": ["山"],
+      "component_meanings": { "山": "three mountain peaks" },
+      "component_pinyin": { "山": "shān" },
+      "binding_constraint": "Bind the visual piece (three mountain peaks) with the sound 'shān' (Shanghai) and the 1st flat tone into a scene that means 'mountain' -- those three peaks together look like the mountains of Shanghai (shān).",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["nature", "geography", "hs1"],
+      "family": "nature"
+    },
+    {
+      "id": "ATOM-0042",
+      "character": "土",
+      "pinyin": "tǔ",
+      "tone": 3,
+      "tone_contour": "dip-rise (ˇ)",
+      "meaning": "earth / soil",
+      "is_moe_atom": true,
+      "visual_pieces": ["土"],
+      "component_meanings": { "土": "a cross planted on the ground" },
+      "component_pinyin": { "土": "tǔ" },
+      "binding_constraint": "Bind the visual piece (a cross planted on the ground) with the sound 'tǔ' (to) and the 3rd dip-rise tone into a scene that means 'earth / soil' -- a cross to (tǔ) save the earth.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["nature", "geography", "hs1"],
+      "family": "nature"
+    },
+    {
+      "id": "ATOM-0043",
+      "character": "士",
+      "pinyin": "shì",
+      "tone": 4,
+      "tone_contour": "falling (ˋ)",
+      "meaning": "soldier / scholar / gentleman",
+      "is_moe_atom": true,
+      "visual_pieces": ["士"],
+      "component_meanings": { "士": "a cross with a shield over it" },
+      "component_pinyin": { "士": "shì" },
+      "binding_constraint": "Bind the visual piece (a cross with a shield over it) with the sound 'shì' (shielding) and the 4th falling tone into a scene that means 'soldier / scholar / gentleman' -- across for shielding (shì) a soldier, scholar or gentleman.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["person", "society", "hs2"],
+      "family": "people"
+    },
+    {
+      "id": "ATOM-0044",
+      "character": "夕",
+      "pinyin": "xī",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "evening / sunset",
+      "is_moe_atom": true,
+      "visual_pieces": ["夕"],
+      "component_meanings": { "夕": "a figure gliding on skis" },
+      "component_pinyin": { "夕": "xī" },
+      "binding_constraint": "Bind the visual piece (a figure gliding on skis) with the sound 'xī' (ski) and the 1st flat tone into a scene that means 'evening / sunset' -- someone ski (xī) gliding under the evening sunset.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["time", "nature", "hs2"],
+      "family": "time"
+    },
+    {
+      "id": "ATOM-0045",
+      "character": "也",
+      "pinyin": "yě",
+      "tone": 3,
+      "tone_contour": "dip-rise (ˇ)",
+      "meaning": "also / too",
+      "is_moe_atom": true,
+      "visual_pieces": ["也"],
+      "component_meanings": { "也": "a Large L connected to a little l" },
+      "component_pinyin": { "也": "yě" },
+      "binding_constraint": "Bind the visual piece (a Large L connected to a little l) with the sound 'yě' (yeah) and the 3rd dip-rise tone into a scene that means 'also / too' -- Large L is also connected to little l too, yeah (yě).",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["grammar", "abstract", "hs1"],
+      "family": "abstract"
+    }
     ]
   }
 }
