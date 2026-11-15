@@ -1258,6 +1258,132 @@
       },
       "tags": ["person", "society", "hs1"],
       "family": "people"
+    },
+    {
+      "id": "ATOM-0053",
+      "character": "玉",
+      "pinyin": "yù",
+      "tone": 4,
+      "tone_contour": "falling (ˋ)",
+      "meaning": "jade",
+      "is_moe_atom": true,
+      "visual_pieces": ["王", "丶"],
+      "component_meanings": { "王": "King Wang", "丶": "a dropped piece" },
+      "component_pinyin": { "王": "wáng", "丶": "diǎn" },
+      "binding_constraint": "Bind the visual pieces (King Wang, a dropped piece) with the sound 'yù' (you) and the 4th falling tone into a scene that means 'jade' -- what is King Wang of China doing? Giving you (yù) his dropped piece (丶) of jade.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["object", "nature", "hs2"],
+      "family": "objects"
+    },
+    {
+      "id": "ATOM-0054",
+      "character": "主",
+      "pinyin": "zhǔ",
+      "tone": 3,
+      "tone_contour": "dip-rise (ˇ)",
+      "meaning": "master / main",
+      "is_moe_atom": true,
+      "visual_pieces": ["王", "丶"],
+      "component_meanings": { "王": "King Wang", "丶": "the head" },
+      "component_pinyin": { "王": "wáng", "丶": "diǎn" },
+      "binding_constraint": "Bind the visual pieces (King Wang, the head) with the sound 'zhǔ' and the 3rd dip-rise tone into a scene that means 'master / main' -- King Wang (王) is the head (丶) main master.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["person", "society", "hs1"],
+      "family": "people"
+    },
+    {
+      "id": "ATOM-0055",
+      "character": "生",
+      "pinyin": "shēng",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "life / birth",
+      "is_moe_atom": true,
+      "visual_pieces": ["土", "丿"],
+      "component_meanings": { "土": "the earth", "丿": "a floating person" },
+      "component_pinyin": { "土": "tǔ", "丿": "piě" },
+      "binding_constraint": "Bind the visual pieces (the earth, a floating person) with the sound 'shēng' (Schengen) and the 1st flat tone into a scene that means 'life / birth' -- what is that floating person doing above the earth (土)? That's a Schengen engineer (shēng) launching life across into orbit!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["nature", "abstract", "hs1"],
+      "family": "nature"
+    },
+    {
+      "id": "ATOM-0056",
+      "character": "失",
+      "pinyin": "shī",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "to lose",
+      "is_moe_atom": true,
+      "visual_pieces": ["大", "丿"],
+      "component_meanings": { "大": "a big person", "丿": "a person floating across" },
+      "component_pinyin": { "大": "dà", "丿": "piě" },
+      "binding_constraint": "Bind the visual pieces (a big person, a floating person) with the sound 'shī' (she) and the 1st flat tone into a scene that means 'to lose' -- why is that person floating across a big person? I guess she (shī) is trying not to lose everything.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["action", "abstract", "hs1"],
+      "family": "actions"
+    },
+    {
+      "id": "ATOM-0057",
+      "character": "未",
+      "pinyin": "wèi",
+      "tone": 4,
+      "tone_contour": "falling (ˋ)",
+      "meaning": "not yet",
+      "is_moe_atom": true,
+      "visual_pieces": ["木", "一"],
+      "component_meanings": { "木": "the scarecrow on the wooden cross", "一": "a short line of birds above" },
+      "component_pinyin": { "木": "mù", "一": "yī" },
+      "binding_constraint": "Bind the visual pieces (the scarecrow on a wooden cross, a short line of birds above) with the sound 'wèi' (wait) and the 4th falling tone into a scene that means 'not yet' -- the scarecrow on the wooden cross yelling angrily at the short line of birds above - wait (wèi), not yet!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["abstract", "time", "hs2"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0058",
+      "character": "末",
+      "pinyin": "mò",
+      "tone": 4,
+      "tone_contour": "falling (ˋ)",
+      "meaning": "end",
+      "is_moe_atom": true,
+      "visual_pieces": ["木", "一"],
+      "component_meanings": { "木": "the scarecrow on the wooden cross", "一": "a long line of birds above" },
+      "component_pinyin": { "木": "mù", "一": "yī" },
+      "binding_constraint": "Bind the visual pieces (the scarecrow on a wooden cross, a long line of birds above) with the sound 'mò' (move) and the 4th falling tone into a scene that means 'end' -- the scarecrow on the wooden cross yells angrily at the long line of birds above - move (mò) to the end!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["abstract", "time", "hs2"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0059",
+      "character": "朱",
+      "pinyin": "zhū",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "vermilion / red",
+      "is_moe_atom": true,
+      "visual_pieces": ["木", "丿"],
+      "component_meanings": { "木": "a tree", "丿": "a floating person / bird" },
+      "component_pinyin": { "木": "mù", "丿": "piě" },
+      "binding_constraint": "Bind the visual pieces (a tree, a floating shape) with the sound 'zhū' (zoo) and the 1st flat tone into a scene that means 'vermilion / red' -- why is that person (丿) floating above a tree (木)? That’s no person--it’s a red vermilion zoo (zhū) bird!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["nature", "colours", "hs2"],
+      "family": "nature"
     }
     ]
   }
