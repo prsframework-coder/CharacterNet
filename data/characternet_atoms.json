@@ -1609,10 +1609,10 @@
       "tone_contour": "rising (')",
       "meaning": "hair / fur",
       "is_moe_atom": true,
-      "visual_pieces": ["乚", "一", "一"],
-      "component_meanings": { "乚": "a left arm", "一": "fingers / strands of fur" },
-      "component_pinyin": { "乚": "yǐn", "一": "yī" },
-      "binding_constraint": "Bind the visual pieces (a left arm, fingers/strands) with the sound 'máo' (Mao cat) and the 2nd rising tone into a scene that means 'hair / fur' -- left arm (乚) with five fingers is a Mao (máo) cat’s fur hair!",
+      "visual_pieces": ["丿", "一", "一", "乚"],
+      "component_meanings": { "丿": "top finger / strand", "一": "lower fingers / strands", "乚": "a left arm" },
+      "component_pinyin": { "丿": "piě", "一": "yī", "乚": "yǐn" },
+      "binding_constraint": "Bind the visual pieces (top finger, lower fingers, a left arm) with the sound 'máo' (Mao cat) and the 2nd rising tone into a scene that means 'hair / fur' -- left arm (乚) with five fingers is a Mao (máo) cat’s fur hair!",
       "connections": {
         "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
       },
@@ -1627,10 +1627,10 @@
       "tone_contour": "dip-rise (ˇ)",
       "meaning": "hand",
       "is_moe_atom": true,
-      "visual_pieces": ["亅", "一", "一"],
-      "component_meanings": { "亅": "a right arm", "一": "fingers" },
-      "component_pinyin": { "亅": "jué", "一": "yī" },
-      "binding_constraint": "Bind the visual pieces (a right arm, fingers) with the sound 'shǒu' (shouting) and the 3rd dip-rise tone into a scene that means 'hand' -- a right arm (亅) with five fingers is a raised hand shouting (shǒu) order in court!",
+      "visual_pieces": ["丿", "一", "一", "亅"],
+      "component_meanings": { "丿": "top finger", "一": "lower fingers", "亅": "a right arm" },
+      "component_pinyin": { "丿": "piě", "一": "yī", "亅": "jué" },
+      "binding_constraint": "Bind the visual pieces (top finger, lower fingers, a right arm) with the sound 'shǒu' (shouting) and the 3rd dip-rise tone into a scene that means 'hand' -- a right arm (亅) with five fingers is a raised hand shouting (shǒu) order in court!",
       "connections": {
         "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
       },
