@@ -1510,6 +1510,132 @@
       },
       "tags": ["time", "society", "hs2"],
       "family": "abstract"
+    },
+    {
+      "id": "ATOM-0067",
+      "character": "田",
+      "pinyin": "tián",
+      "tone": 2,
+      "tone_contour": "rising (')",
+      "meaning": "field / farmland",
+      "is_moe_atom": true,
+      "visual_pieces": ["口", "十"],
+      "component_meanings": { "口": "an open field", "十": "a cross" },
+      "component_pinyin": { "口": "kǒu", "十": "shí" },
+      "binding_constraint": "Bind the visual pieces (an open field, a cross) with the sound 'tián' (tent) and the 2nd rising tone into a scene that means 'field / farmland' -- a cross (十) planted in an open (口) field tent (tián).",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["nature", "place", "hs1"],
+      "family": "nature"
+    },
+    {
+      "id": "ATOM-0068",
+      "character": "由",
+      "pinyin": "yóu",
+      "tone": 2,
+      "tone_contour": "rising (')",
+      "meaning": "from / cause",
+      "is_moe_atom": true,
+      "visual_pieces": ["口", "十", "丨"],
+      "component_meanings": { "口": "an open field", "十": "a cross", "丨": "a waving arm" },
+      "component_pinyin": { "口": "kǒu", "十": "shí", "丨": "gǔn" },
+      "binding_constraint": "Bind the visual pieces (an open field, a cross, a waving arm) with the sound 'yóu' (you) and the 2nd rising tone into a scene that means 'from / cause' -- a cross (十) in an open (口) field, waving (丨) at you (yóu?!) from the tent!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["abstract", "direction", "hs2"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0069",
+      "character": "甲",
+      "pinyin": "jiǎ",
+      "tone": 3,
+      "tone_contour": "dip-rise (ˇ)",
+      "meaning": "armor / first",
+      "is_moe_atom": true,
+      "visual_pieces": ["口", "十", "丨"],
+      "component_meanings": { "口": "an open field", "十": "a cross", "丨": "an armoured flagpole" },
+      "component_pinyin": { "口": "kǒu", "十": "shí", "丨": "gǔn" },
+      "binding_constraint": "Bind the visual pieces (an open field, a cross, an armoured flagpole) with the sound 'jiǎ' (Union Jack) and the 3rd dip-rise tone into a scene that means 'armor / first' -- Union Jack (jiǎ) armoured flagpole (丨) planted in a cross (十) open (口) field!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["object", "nature", "hs2"],
+      "family": "objects"
+    },
+    {
+      "id": "ATOM-0070",
+      "character": "申",
+      "pinyin": "shēn",
+      "tone": 1,
+      "tone_contour": "flat (ˉ)",
+      "meaning": "to state / 9th earthly branch",
+      "is_moe_atom": true,
+      "visual_pieces": ["口", "十", "丨"],
+      "component_meanings": { "口": "an open field", "十": "a cross", "丨": "one vertical line" },
+      "component_pinyin": { "口": "kǒu", "十": "shí", "丨": "gǔn" },
+      "binding_constraint": "Bind the visual pieces (an open field, a cross, one vertical line) with the sound 'shēn' (Schengen) and the 1st flat tone into a scene that means 'to state / 9th earthly branch' -- one (丨) across a cross (十) open (口) field is the state of Schengen (shēn).",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["abstract", "place", "hs2"],
+      "family": "abstract"
+    },
+    {
+      "id": "ATOM-0071",
+      "character": "电",
+      "pinyin": "diàn",
+      "tone": 4,
+      "tone_contour": "falling (ˋ)",
+      "meaning": "electricity",
+      "is_moe_atom": true,
+      "visual_pieces": ["田", "乚"],
+      "component_meanings": { "田": "a crossed open field", "乚": "a wire / lightning bolt" },
+      "component_pinyin": { "田": "tián", "乚": "yǐn" },
+      "binding_constraint": "Bind the visual pieces (a crossed open field, a wire/lightning bolt) with the sound 'diàn' and the 4th falling tone into a scene that means 'electricity' -- a line (乚) running down and across diàn (!) a crossed (十) open (口) field carries electricity.",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["nature", "science", "hs1"],
+      "family": "nature"
+    },
+    {
+      "id": "ATOM-0072",
+      "character": "毛",
+      "pinyin": "máo",
+      "tone": 2,
+      "tone_contour": "rising (')",
+      "meaning": "hair / fur",
+      "is_moe_atom": true,
+      "visual_pieces": ["乚", "一", "一"],
+      "component_meanings": { "乚": "a left arm", "一": "fingers / strands of fur" },
+      "component_pinyin": { "乚": "yǐn", "一": "yī" },
+      "binding_constraint": "Bind the visual pieces (a left arm, fingers/strands) with the sound 'máo' (Mao cat) and the 2nd rising tone into a scene that means 'hair / fur' -- left arm (乚) with five fingers is a Mao (máo) cat’s fur hair!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["body", "animal", "hs1"],
+      "family": "body"
+    },
+    {
+      "id": "ATOM-0073",
+      "character": "手",
+      "pinyin": "shǒu",
+      "tone": 3,
+      "tone_contour": "dip-rise (ˇ)",
+      "meaning": "hand",
+      "is_moe_atom": true,
+      "visual_pieces": ["亅", "一", "一"],
+      "component_meanings": { "亅": "a right arm", "一": "fingers" },
+      "component_pinyin": { "亅": "jué", "一": "yī" },
+      "binding_constraint": "Bind the visual pieces (a right arm, fingers) with the sound 'shǒu' (shouting) and the 3rd dip-rise tone into a scene that means 'hand' -- a right arm (亅) with five fingers is a raised hand shouting (shǒu) order in court!",
+      "connections": {
+        "component_to_action": true, "identity_link": true, "causal_order": true, "sound_in_action": true, "tone_in_word": true, "meaning_as_payoff": true
+      },
+      "tags": ["body", "hs1"],
+      "family": "body"
     }
     ]
   }
