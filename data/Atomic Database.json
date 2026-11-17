@@ -1,0 +1,182 @@
+<script>
+// ==========================================
+// 1. THE ATOMIC DATABASE (CLEAN LABELS)
+// ==========================================
+const ATOMS_DATA = [
+  { "character": "日", "pinyin": "rì", "tone": 4, "meaning": "sun", "visual_pieces": ["日"], "component_pinyin": {"日": "rì"}, "component_meanings": {"日": "sun"} },
+  { "character": "白", "pinyin": "bái", "tone": 2, "meaning": "white", "visual_pieces": ["日", "丿"], "component_pinyin": {"日": "rì", "丿": "piě"}, "component_meanings": {"日": "sun", "丿": "hand waving"} },
+  { "character": "八", "pinyin": "bā", "tone": 1, "meaning": "eight", "visual_pieces": ["八"], "component_pinyin": {"八": "bā"}, "component_meanings": {"八": "splayed legs"} },
+  { "character": "本", "pinyin": "běn", "tone": 3, "meaning": "root", "visual_pieces": ["木", "一"], "component_pinyin": {"木": "mù", "一": "yī"}, "component_meanings": {"木": "tree", "一": "base line"} },
+  { "character": "凹", "pinyin": "āo", "tone": 1, "meaning": "concave", "visual_pieces": ["凹"], "component_pinyin": {"凹": "āo"}, "component_meanings": {"凹": "sunken pit"} },
+  { "character": "巴", "pinyin": "bā", "tone": 1, "meaning": "snake", "visual_pieces": ["巳", "丨"], "component_pinyin": {"巳": "sì", "丨": "gǔn"}, "component_meanings": {"巳": "coiled snake", "丨": "wall"} },
+  { "character": "百", "pinyin": "bǎi", "tone": 3, "meaning": "hundred", "visual_pieces": ["一", "白"], "component_pinyin": {"一": "yī", "白": "bái"}, "component_meanings": {"一": "one", "白": "white"} },
+  { "character": "办", "pinyin": "bàn", "tone": 4, "meaning": "to handle", "visual_pieces": ["力", "八"], "component_pinyin": {"力": "lì", "八": "bā"}, "component_meanings": {"力": "flexed arm", "八": "spreading legs"} },
+  { "character": "半", "pinyin": "bàn", "tone": 4, "meaning": "half", "visual_pieces": ["丷", "二", "丨"], "component_pinyin": {"丷": "bā", "二": "èr", "丨": "gǔn"}, "component_meanings": {"丷": "horns", "二": "two lines", "丨": "spear"} },
+  { "character": "贝", "pinyin": "bèi", "tone": 4, "meaning": "shell", "visual_pieces": ["冂", "人"], "component_pinyin": {"冂": "jiōng", "人": "rén"}, "component_meanings": {"冂": "box", "人": "person"} },
+  { "character": "匕", "pinyin": "bǐ", "tone": 3, "meaning": "spoon", "visual_pieces": ["匕"], "component_pinyin": {"匕": "bǐ"}, "component_meanings": {"匕": "spoon"} },
+  { "character": "七", "pinyin": "qī", "tone": 1, "meaning": "seven", "visual_pieces": ["L", "一"], "component_pinyin": {"L": "ell", "一": "yī"}, "component_meanings": {"L": "upside-down 7", "一": "crossbar"} },
+  { "character": "才", "pinyin": "cái", "tone": 2, "meaning": "talent", "visual_pieces": ["亅", "一", "丿"], "component_pinyin": {"亅": "jué", "一": "yī", "丿": "piě"}, "component_meanings": {"亅": "hook", "一": "line", "丿": "pull stroke"} },
+  { "character": "寸", "pinyin": "cùn", "tone": 4, "meaning": "inch", "visual_pieces": ["才", "丶"], "component_pinyin": {"才": "cái", "丶": "diǎn"}, "component_meanings": {"才": "catch", "丶": "coin"} },
+  { "character": "大", "pinyin": "dà", "tone": 4, "meaning": "big", "visual_pieces": ["人", "一"], "component_pinyin": {"人": "rén", "一": "yī"}, "component_meanings": {"人": "person", "一": "arms wide"} },
+  { "character": "刀", "pinyin": "dāo", "tone": 1, "meaning": "knife", "visual_pieces": ["刀"], "component_pinyin": {"刀": "dāo"}, "component_meanings": {"刀": "knife"} },
+  { "character": "丁", "pinyin": "dīng", "tone": 1, "meaning": "nail", "visual_pieces": ["丁"], "component_pinyin": {"丁": "dīng"}, "component_meanings": {"丁": "nail"} },
+  { "character": "厂", "pinyin": "chǎng", "tone": 3, "meaning": "factory", "visual_pieces": ["厂"], "component_pinyin": {"厂": "chǎng"}, "component_meanings": {"厂": "cliff"} },
+  { "character": "口", "pinyin": "kǒu", "tone": 3, "meaning": "mouth", "visual_pieces": ["口"], "component_pinyin": {"口": "kǒu"}, "component_meanings": {"口": "open mouth"} },
+  { "character": "一", "pinyin": "yī", "tone": 1, "meaning": "one", "visual_pieces": ["一"], "component_pinyin": {"一": "yī"}, "component_meanings": {"一": "line"} },
+  { "character": "二", "pinyin": "èr", "tone": 4, "meaning": "two", "visual_pieces": ["二"], "component_pinyin": {"二": "èr"}, "component_meanings": {"二": "two lines"} },
+  { "character": "三", "pinyin": "sān", "tone": 1, "meaning": "three", "visual_pieces": ["三"], "component_pinyin": {"三": "sān"}, "component_meanings": {"三": "three lines"} },
+  { "character": "四", "pinyin": "sì", "tone": 4, "meaning": "four", "visual_pieces": ["囗", "儿"], "component_pinyin": {"囗": "wéi", "儿": "ér"}, "component_meanings": {"囗": "opening/pen", "儿": "legs"} },
+  { "character": "五", "pinyin": "wǔ", "tone": 3, "meaning": "five", "visual_pieces": ["一", "／", "｜"], "component_pinyin": {"一": "yī", "／": "slash", "｜": "gǔn"}, "component_meanings": {"一": "top bar", "／": "angle", "｜": "vertical"} },
+  { "character": "六", "pinyin": "liù", "tone": 4, "meaning": "six", "visual_pieces": ["亠", "八"], "component_pinyin": {"亠": "tóu", "八": "bā"}, "component_meanings": {"亠": "lid", "八": "legs"} },
+  { "character": "九", "pinyin": "jiǔ", "tone": 3, "meaning": "nine", "visual_pieces": ["丿", "一", "乚"], "component_pinyin": {"丿": "piě", "一": "yī", "乚": "yǐn"}, "component_meanings": {"丿": "leg", "一": "line", "乚": "tail"} },
+  { "character": "十", "pinyin": "shí", "tone": 2, "meaning": "ten", "visual_pieces": ["十"], "component_pinyin": {"十": "shí"}, "component_meanings": {"十": "cross"} },
+  { "character": "儿", "pinyin": "ér", "tone": 2, "meaning": "child", "visual_pieces": ["儿"], "component_pinyin": {"儿": "ér"}, "component_meanings": {"儿": "legs"} },
+  { "character": "木", "pinyin": "mù", "tone": 4, "meaning": "tree", "visual_pieces": ["十", "八"], "component_pinyin": {"十": "shí", "八": "bā"}, "component_meanings": {"十": "cross", "八": "legs"} },
+  { "character": "兔", "pinyin": "tù", "tone": 4, "meaning": "rabbit", "visual_pieces": ["子", "口", "儿", "丶"], "component_pinyin": {"子": "zǐ", "口": "kǒu", "儿": "ér", "丶": "diǎn"}, "component_meanings": {"子": "child", "口": "opening", "儿": "legs", "丶": "dot"} },
+  { "character": "免", "pinyin": "miǎn", "tone": 3, "meaning": "to avoid", "visual_pieces": ["子", "口", "儿"], "component_pinyin": {"子": "zǐ", "口": "kǒu", "儿": "ér"}, "component_meanings": {"子": "child", "口": "opening", "儿": "legs"} },
+  { "character": "干", "pinyin": "gān", "tone": 1, "meaning": "dry / to do", "visual_pieces": ["一", "十"], "component_pinyin": {"一": "yī", "十": "shí"}, "component_meanings": {"一": "one crossbar", "十": "gangway cross"} },
+  { "character": "工", "pinyin": "gōng", "tone": 1, "meaning": "work / labor", "visual_pieces": ["工"], "component_pinyin": {"工": "gōng"}, "component_meanings": {"工": "dumbbell / gong"} },
+  { "character": "弓", "pinyin": "gōng", "tone": 1, "meaning": "bow / weapon", "visual_pieces": ["弓"], "component_pinyin": {"弓": "gōng"}, "component_meanings": {"弓": "backward-S snake"} },
+  { "character": "己", "pinyin": "jǐ", "tone": 3, "meaning": "self", "visual_pieces": ["己"], "component_pinyin": {"己": "jǐ"}, "component_meanings": {"己": "backward-S snake"} },
+  { "character": "巾", "pinyin": "jīn", "tone": 1, "meaning": "towel / cloth", "visual_pieces": ["巾"], "component_pinyin": {"巾": "jīn"}, "component_meanings": {"巾": "cloth hanger"} },
+  { "character": "广", "pinyin": "guǎng", "tone": 3, "meaning": "broad / wide", "visual_pieces": ["厂", "丶"], "component_pinyin": {"厂": "chǎng", "丶": "diǎn"}, "component_meanings": {"厂": "factory tool", "丶": "adjustable gauge knob"} },
+  { "character": "子", "pinyin": "zǐ", "tone": 3, "meaning": "child / son", "visual_pieces": ["一", "了"], "component_pinyin": {"一": "yī", "了": "le"}, "component_meanings": {"一": "arms wide apart", "了": "zipping along"} },
+  { "character": "了", "pinyin": "le", "tone": 0, "meaning": "completed / already", "visual_pieces": ["了"], "component_pinyin": {"了": "le"}, "component_meanings": {"了": "zipping snake"} },
+  { "character": "久", "pinyin": "jiǔ", "tone": 3, "meaning": "long time", "visual_pieces": ["人", "一"], "component_pinyin": {"人": "rén", "一": "yī"}, "component_meanings": {"人": "person", "一": "one line"} },
+  { "character": "女", "pinyin": "nǚ", "tone": 3, "meaning": "woman", "visual_pieces": ["女"], "component_pinyin": {"女": "nǚ"}, "component_meanings": {"女": "figure with crossed legs"} },
+  { "character": "山", "pinyin": "shān", "tone": 1, "meaning": "mountain", "visual_pieces": ["山"], "component_pinyin": {"山": "shān"}, "component_meanings": {"山": "three mountain peaks"} },
+  { "character": "土", "pinyin": "tǔ", "tone": 3, "meaning": "earth / soil", "visual_pieces": ["土"], "component_pinyin": {"土": "tǔ"}, "component_meanings": {"土": "cross on the ground"} },
+  { "character": "士", "pinyin": "shì", "tone": 4, "meaning": "soldier / scholar", "visual_pieces": ["士"], "component_pinyin": {"士": "shì"}, "component_meanings": {"士": "cross with a shield"} },
+  { "character": "夕", "pinyin": "xī", "tone": 1, "meaning": "evening / sunset", "visual_pieces": ["夕"], "component_pinyin": {"夕": "xī"}, "component_meanings": {"夕": "figure gliding on skis"} },
+  { "character": "也", "pinyin": "yě", "tone": 3, "meaning": "also / too", "visual_pieces": ["也"], "component_pinyin": {"也": "yě"}, "component_meanings": {"也": "Large L connected to little l"} },
+  { "character": "天", "pinyin": "tiān", "tone": 1, "meaning": "sky / heaven", "visual_pieces": ["一", "大"], "component_pinyin": {"一": "yī", "大": "dà"}, "component_meanings": {"一": "head wings", "大": "a big person"} },
+  { "character": "夫", "pinyin": "fū", "tone": 1, "meaning": "husband / man", "visual_pieces": ["一", "大"], "component_pinyin": {"一": "yī", "大": "dà"}, "component_meanings": {"一": "the fuselage", "大": "a big person"} },
+  { "character": "太", "pinyin": "tài", "tone": 4, "meaning": "too / very", "visual_pieces": ["大", "丶"], "component_pinyin": {"大": "dà", "丶": "diǎn"}, "component_meanings": {"大": "a big person", "丶": "the taichi dot"} },
+  { "character": "少", "pinyin": "shǎo", "tone": 3, "meaning": "few / little", "visual_pieces": ["小", "丿"], "component_pinyin": {"小": "xiǎo", "丿": "piě"}, "component_meanings": {"小": "a small figure", "丿": "a surfer's board"} },
+  { "character": "小", "pinyin": "xiǎo", "tone": 3, "meaning": "small / little", "visual_pieces": ["亅", "八"], "component_pinyin": {"亅": "jué", "八": "bā"}, "component_meanings": {"亅": "the little creature body", "八": "two dangling arms"} },
+  { "character": "川", "pinyin": "chuān", "tone": 1, "meaning": "river / stream", "visual_pieces": ["川"], "component_pinyin": {"川": "chuān"}, "component_meanings": {"川": "three flowing river lines"} },
+  { "character": "王", "pinyin": "wáng", "tone": 2, "meaning": "king", "visual_pieces": ["一", "十", "一"], "component_pinyin": {"一": "yī", "十": "shí"}, "component_meanings": {"一": "top line", "十": "cross", "一": "bottom line"} },
+  { "character": "玉", "pinyin": "yù", "tone": 4, "meaning": "jade", "visual_pieces": ["王", "丶"], "component_pinyin": {"王": "wáng", "丶": "diǎn"}, "component_meanings": {"王": "King Wang", "丶": "a dropped piece"} },
+  { "character": "主", "pinyin": "zhǔ", "tone": 3, "meaning": "master / main", "visual_pieces": ["王", "丶"], "component_pinyin": {"王": "wáng", "丶": "diǎn"}, "component_meanings": {"王": "King Wang", "丶": "the head"} },
+  { "character": "生", "pinyin": "shēng", "tone": 1, "meaning": "life / birth", "visual_pieces": ["土", "丿"], "component_pinyin": {"土": "tǔ", "丿": "piě"}, "component_meanings": {"土": "the earth", "丿": "a floating person"} },
+  { "character": "失", "pinyin": "shī", "tone": 1, "meaning": "to lose", "visual_pieces": ["大", "丿"], "component_pinyin": {"大": "dà", "丿": "piě"}, "component_meanings": {"大": "a big person", "丿": "a person floating across"} },
+  { "character": "未", "pinyin": "wèi", "tone": 4, "meaning": "not yet", "visual_pieces": ["木", "一"], "component_pinyin": {"木": "mù", "一": "yī"}, "component_meanings": {"木": "the scarecrow on the wooden cross", "一": "a short line of birds above"} },
+  { "character": "末", "pinyin": "mò", "tone": 4, "meaning": "end", "visual_pieces": ["木", "一"], "component_pinyin": {"木": "mù", "一": "yī"}, "component_meanings": {"木": "the scarecrow on the wooden cross", "一": "a long line of birds above"} },
+  { "character": "朱", "pinyin": "zhū", "tone": 1, "meaning": "vermilion / red", "visual_pieces": ["木", "丿"], "component_pinyin": {"木": "mù", "丿": "piě"}, "component_meanings": {"木": "a tree", "丿": "a floating person / bird"} },
+  { "character": "甘", "pinyin": "gān", "tone": 1, "meaning": "sweet", "visual_pieces": ["日", "一"], "component_pinyin": {"日": "rì", "一": "yī"}, "component_meanings": {"日": "the sun", "一": "both hands raised"} },
+  { "character": "石", "pinyin": "shí", "tone": 2, "meaning": "stone / rock", "visual_pieces": ["厂", "口"], "component_pinyin": {"厂": "chǎng", "口": "kǒu"}, "component_meanings": {"厂": "a factory tool", "口": "an open mouth"} },
+  { "character": "右", "pinyin": "yòu", "tone": 4, "meaning": "right", "visual_pieces": ["𠂇", "口"], "component_pinyin": {"𠂇": "yòu", "口": "kǒu"}, "component_meanings": {"𠂇": "a long right arm pointing a finger", "口": "an opening"} },
+  { "character": "左", "pinyin": "zuǒ", "tone": 3, "meaning": "left", "visual_pieces": ["𠂇", "工"], "component_pinyin": {"𠂇": "yòu", "工": "gōng"}, "component_meanings": {"𠂇": "a long right arm", "工": "a dumbbell"} },
+  { "character": "出", "pinyin": "chū", "tone": 1, "meaning": "to go out", "visual_pieces": ["山", "山"], "component_pinyin": {"山": "shān"}, "component_meanings": {"山": "a mountain"} },
+  { "character": "正", "pinyin": "zhèng", "tone": 4, "meaning": "correct / upright", "visual_pieces": ["一", "丨", "工"], "component_pinyin": {"一": "yī", "丨": "gǔn", "工": "gōng"}, "component_meanings": {"一": "the top bar", "丨": "one engineered vertical line", "工": "the dumbbell base"} },
+  { "character": "世", "pinyin": "shì", "tone": 4, "meaning": "generation / world", "visual_pieces": ["廿", "L"], "component_pinyin": {"廿": "niàn", "L": "ell"}, "component_meanings": {"廿": "twenties (two tens)", "L": "leaders"} },
+  { "character": "田", "pinyin": "tián", "tone": 2, "meaning": "field / farmland", "visual_pieces": ["口", "十"], "component_pinyin": {"口": "kǒu", "十": "shí"}, "component_meanings": {"口": "an open field", "十": "a cross"} },
+  { "character": "由", "pinyin": "yóu", "tone": 2, "meaning": "from / cause", "visual_pieces": ["口", "十", "丨"], "component_pinyin": {"口": "kǒu", "十": "shí", "丨": "gǔn"}, "component_meanings": {"口": "an open field", "十": "a cross", "丨": "a waving arm"} },
+  { "character": "甲", "pinyin": "jiǎ", "tone": 3, "meaning": "armor / first", "visual_pieces": ["口", "十", "丨"], "component_pinyin": {"口": "kǒu", "十": "shí", "丨": "gǔn"}, "component_meanings": {"口": "an open field", "十": "a cross", "丨": "an armoured flagpole"} },
+  { "character": "申", "pinyin": "shēn", "tone": 1, "meaning": "to state / 9th earthly branch", "visual_pieces": ["口", "十", "丨"], "component_pinyin": {"口": "kǒu", "十": "shí", "丨": "gǔn"}, "component_meanings": {"口": "an open field", "十": "a cross", "丨": "one vertical line"} },
+  { "character": "电", "pinyin": "diàn", "tone": 4, "meaning": "electricity", "visual_pieces": ["田", "乚"], "component_pinyin": {"田": "tián", "乚": "yǐn"}, "component_meanings": {"田": "a crossed open field", "乚": "a wire / lightning bolt"} },
+  { "character": "毛", "pinyin": "máo", "tone": 2, "meaning": "hair / fur", "visual_pieces": ["丿", "一", "一", "乚"], "component_pinyin": {"丿": "piě", "一": "yī", "乚": "yǐn"}, "component_meanings": {"丿": "top finger / strand", "一": "lower fingers / strands", "乚": "a left arm"} },
+  { "character": "手", "pinyin": "shǒu", "tone": 3, "meaning": "hand", "visual_pieces": ["丿", "一", "一", "亅"], "component_pinyin": {"丿": "piě", "一": "yī", "亅": "jué"}, "component_meanings": {"丿": "top finger", "一": "lower fingers", "亅": "a right arm"} }
+];
+
+let ATOMS = {}; 
+ATOMS_DATA.forEach(item => { ATOMS[item.character] = item; });
+
+
+// ==========================================
+// 2. THE SQUEEZED FORM MAPPER
+// ==========================================
+const SQUEEZED_FORMS = {
+  '亻': '人', '朩': '木', '氵': '水', '扌': '手', '忄': '心', '讠': '言', '饣': '食', '钅': '金', '纟': '糸', '刂': '刀', '灬': '火'
+};
+
+
+// ==========================================
+// 3. THE COMPOUND RESOLVER
+// ==========================================
+const COMPOUND_MAP = {
+  '林': { pinyin: 'lín', tone: 2, meaning: 'forest', parts: ['木', '木'] },
+  '森': { pinyin: 'sēn', tone: 1, meaning: 'dense forest', parts: ['木', '木', '木'] },
+  '明': { pinyin: 'míng', tone: 2, meaning: 'bright', parts: ['日', '月'] },
+  '好': { pinyin: 'hǎo', tone: 3, meaning: 'good', parts: ['女', '子'] },
+  '男': { pinyin: 'nán', tone: 2, meaning: 'man', parts: ['田', '力'] }
+};
+
+
+// ==========================================
+// 4. THE LOOKUP LOGIC
+// ==========================================
+function lookup() {
+  const input = document.getElementById('charInput').value.trim();
+  const resultArea = document.getElementById('resultArea');
+  const error = document.getElementById('errorMsg');
+
+  resultArea.classList.add('hidden');
+  error.classList.add('hidden');
+
+  if (!input) return;
+
+  let displayData = {
+    character: input, pinyin: "--", tone: "--", meaning: "Unknown",
+    visual_pieces: [], component_pinyin: {}, component_meanings: {}
+  };
+
+  if (ATOMS[input]) {
+    displayData = ATOMS[input];
+  } 
+  else if (COMPOUND_MAP[input]) {
+    const compound = COMPOUND_MAP[input];
+    displayData.pinyin = compound.pinyin;
+    displayData.tone = compound.tone;
+    displayData.meaning = compound.meaning;
+    
+    compound.parts.forEach(rawPart => {
+      const cleanPart = SQUEEZED_FORMS[rawPart] || rawPart;
+      if (ATOMS[cleanPart]) {
+        displayData.visual_pieces.push(...ATOMS[cleanPart].visual_pieces);
+        Object.assign(displayData.component_pinyin, ATOMS[cleanPart].component_pinyin);
+        Object.assign(displayData.component_meanings, ATOMS[cleanPart].component_meanings);
+      } else {
+        displayData.visual_pieces.push(rawPart);
+        displayData.component_meanings[rawPart] = "Unknown component";
+      }
+    });
+  } 
+  else {
+    error.classList.remove('hidden');
+    return;
+  }
+
+  document.getElementById('resChar').textContent = displayData.character;
+  document.getElementById('resMeaning').textContent = displayData.meaning;
+  
+  // Handle the neutral tone display for 了
+  let toneDisplay = displayData.tone === 0 ? "Neutral" : `Tone ${displayData.tone}`;
+  document.getElementById('resPinyin').textContent = `${displayData.pinyin} · ${toneDisplay}`;
+
+  const tbody = document.getElementById('resTableBody');
+  tbody.innerHTML = ''; 
+
+  const pieceCounts = {};
+  displayData.visual_pieces.forEach(p => { pieceCounts[p] = (pieceCounts[p] || 0) + 1; });
+  const uniquePieces = [...new Set(displayData.visual_pieces)];
+
+  uniquePieces.forEach((piece) => {
+    const tr = document.createElement('tr');
+    
+    const tdVisual = document.createElement('td'); tdVisual.className = 'col-visual'; tdVisual.innerHTML = `<span class="piece-icon">${piece}</span>`;
+    const tdQty = document.createElement('td'); tdQty.className = 'col-qty'; tdQty.textContent = `${pieceCounts[piece]}x`;
+    const tdName = document.createElement('td'); tdName.className = 'col-name'; tdName.textContent = displayData.component_meanings[piece] || 'Unnamed component';
+    const tdPinyin = document.createElement('td'); tdPinyin.className = 'col-pinyin'; tdPinyin.textContent = displayData.component_pinyin[piece] || '--';
+
+    tr.appendChild(tdVisual); tr.appendChild(tdQty); tr.appendChild(tdName); tr.appendChild(tdPinyin);
+    tbody.appendChild(tr);
+  });
+
+  resultArea.classList.remove('hidden');
+}
+
+document.getElementById('charInput').addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') lookup();
+});
+</script>
