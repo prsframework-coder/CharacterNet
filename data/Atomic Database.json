@@ -76,7 +76,15 @@ const ATOMS_DATA = [
   { "character": "申", "pinyin": "shēn", "tone": 1, "meaning": "to state / 9th earthly branch", "visual_pieces": ["口", "十", "丨"], "component_pinyin": {"口": "kǒu", "十": "shí", "丨": "gǔn"}, "component_meanings": {"口": "an open field", "十": "a cross", "丨": "one vertical line"} },
   { "character": "电", "pinyin": "diàn", "tone": 4, "meaning": "electricity", "visual_pieces": ["田", "乚"], "component_pinyin": {"田": "tián", "乚": "yǐn"}, "component_meanings": {"田": "a crossed open field", "乚": "a wire / lightning bolt"} },
   { "character": "毛", "pinyin": "máo", "tone": 2, "meaning": "hair / fur", "visual_pieces": ["丿", "一", "一", "乚"], "component_pinyin": {"丿": "piě", "一": "yī", "乚": "yǐn"}, "component_meanings": {"丿": "top finger / strand", "一": "lower fingers / strands", "乚": "a left arm"} },
-  { "character": "手", "pinyin": "shǒu", "tone": 3, "meaning": "hand", "visual_pieces": ["丿", "一", "一", "亅"], "component_pinyin": {"丿": "piě", "一": "yī", "亅": "jué"}, "component_meanings": {"丿": "top finger", "一": "lower fingers", "亅": "a right arm"} }
+  { "character": "手", "pinyin": "shǒu", "tone": 3, "meaning": "hand", "visual_pieces": ["丿", "一", "一", "亅"], "component_pinyin": {"丿": "piě", "一": "yī", "亅": "jué"}, "component_meanings": {"丿": "top finger", "一": "lower fingers", "亅": "a right arm"} },
+  { "character": "牛", "pinyin": "niú", "tone": 2, "meaning": "cow / ox", "visual_pieces": ["牛"], "component_pinyin": {"牛": "niú"}, "component_meanings": {"牛": "a convoy of cows heading across the horizon"} },
+  { "character": "羊", "pinyin": "yáng", "tone": 2, "meaning": "sheep / goat", "visual_pieces": ["羊"], "component_pinyin": {"羊": "yáng"}, "component_meanings": {"羊": "three strokes heading either way across"} },
+  { "character": "马", "pinyin": "mǎ", "tone": 3, "meaning": "horse", "visual_pieces": ["马"], "component_pinyin": {"马": "mǎ"}, "component_meanings": {"马": "a sideways looking bird that gallops"} },
+  { "character": "鸟", "pinyin": "niǎo", "tone": 3, "meaning": "bird", "visual_pieces": ["鸟"], "component_pinyin": {"鸟": "niǎo"}, "component_meanings": {"鸟": "a bright-eyed sideways looking bird"} },
+  { "character": "乌", "pinyin": "wū", "tone": 1, "meaning": "crow", "visual_pieces": ["乌"], "component_pinyin": {"乌": "wū"}, "component_meanings": {"乌": "a closed eye sideways looking bird"} },
+  { "character": "鱼", "pinyin": "yú", "tone": 2, "meaning": "fish", "visual_pieces": ["𠂊", "一"], "component_pinyin": {"𠂊": "yú", "一": "yī"}, "component_meanings": {"𠂊": "a person on their side", "一": "a line pulled up"} },
+  { "character": "虫", "pinyin": "chóng", "tone": 2, "meaning": "insect / bug", "visual_pieces": ["虫"], "component_pinyin": {"虫": "chóng"}, "component_meanings": {"虫": "a little thing on the ground heading right through an opening"} },
+  { "character": "犬", "pinyin": "quǎn", "tone": 3, "meaning": "dog", "visual_pieces": ["大", "丶"], "component_pinyin": {"大": "dà", "丶": "diǎn"}, "component_meanings": {"大": "a big person", "丶": "a chip on his right shoulder"} }
 ];
 
 let ATOMS = {}; 
