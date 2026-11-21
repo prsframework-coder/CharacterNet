@@ -1,0 +1,12 @@
+# CharacterNet
+
+> Open visual decomposition dataset mapping foundational Chinese characters into eye-identifiable Lego-like visual pieces, Pinyin, tone, and meaning for interactive learning and app builders.
+
+## Core Resources
+- [PRS Chinese](https://www.prschinese.sg/): Interactive web application powered by CharacterNet where learners combine visual pieces, sound, and tone to build their own sticky memory stories.
+- [CharacterNet GitHub Repository](https://github.com/prsframework-coder/CharacterNet): Open-source dataset, JSON schema, and foundational component records.
+
+## Dataset Schema & Methodology
+- **Scope:** 256 foundational Chinese character components decomposed into recognizable visual pieces rather than handwriting strokes.
+- **Record Fields:** `character`, `pinyin`, `tone`, `meaning`, `visual_pieces`, `component_pinyin`, `component_meanings`.
+- **Learning Rule:** Learners actively combine the visual pieces, Pinyin sound, and tone to create their own sticky story leading to the character's meaning.
